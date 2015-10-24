@@ -50,6 +50,8 @@
 		DC169F221BDBE1F400742B9A /* ParseSportFieldsOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F211BDBE1F400742B9A /* ParseSportFieldsOp.swift */; };
 		DC169F241BDBE35600742B9A /* ParseUrbdanDesignAOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F231BDBE35600742B9A /* ParseUrbdanDesignAOp.swift */; };
 		DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */; };
+		DC169F2C1BDC03B500742B9A /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */; };
+		DC169F2D1BDC03B500742B9A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2B1BDC03B500742B9A /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		DC169F261BDBF55D00742B9A /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
 		DC169F271BDBF55D00742B9A /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
 		DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCommunicator.swift; sourceTree = "<group>"; };
+		DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
+		DC169F2B1BDC03B500742B9A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				DC169EC81BDBCA5300742B9A /* ViewController.swift */,
 				DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */,
 				DC169ECA1BDBCA5300742B9A /* Main.storyboard */,
+				DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */,
+				DC169F2B1BDC03B500742B9A /* CameraViewController.swift */,
 				DC169EEB1BDBCD1D00742B9A /* JSON */,
 				DC169ED01BDBCA5300742B9A /* Assets.xcassets */,
 				DC169ED21BDBCA5300742B9A /* LaunchScreen.storyboard */,
@@ -281,6 +287,8 @@
 			files = (
 				DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */,
 				DC169F1E1BDBDF4C00742B9A /* ParsePOIsOP.swift in Sources */,
+				DC169F2C1BDC03B500742B9A /* CameraOverlayView.swift in Sources */,
+				DC169F2D1BDC03B500742B9A /* CameraViewController.swift in Sources */,
 				DC169F1A1BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift in Sources */,
 				DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */,
 				DC169F1C1BDBDD2800742B9A /* ParsePlayGroundsOp.swift in Sources */,
