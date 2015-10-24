@@ -20,12 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		guard let vc = window?.rootViewController as? ViewController else {
+		guard let vc = window?.rootViewController as? CameraViewController else {
 			fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
 		}
-		//vc.context = self.managedObjectContext
 		
-//		
+        vc.context = self.managedObjectContext
+		
 //		let loadRinks = LoadJSONOperation(fileName: "OutdoorRinks")
 //		let loadParks = LoadJSONOperation(fileName: "ParksSpaces")
 //		let loadWorship = LoadJSONOperation(fileName: "PlacesOfWorship")
@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		
 //		q.addOperations([loadRinks, loadParks, loadWorship, loadPlaygrounds, loadPOI, loadArt, loadField, loadUDA, parseParks, parserinks, parseWorship, parsePlayG, parsePOI, parseArt, parseFieid, parseUDA], waitUntilFinished: false)
 //		
-		
+//		
 		return true
 	}
 
@@ -83,10 +83,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationDidEnterBackground(application: UIApplication) {
 		// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 		// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        guard let vc = window?.rootViewController as? CameraViewController else {
+            fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
+        }
+        vc.stopHeadingAndLocation()
 	}
 
 	func applicationWillEnterForeground(application: UIApplication) {
 		// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        guard let vc = window?.rootViewController as? CameraViewController else {
+            fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
+        }
+        vc.startHeadingAndLocation()
 	}
 
 	func applicationDidBecomeActive(application: UIApplication) {

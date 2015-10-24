@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */; settings = {ASSET_TAGS = (); }; };
-		930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */; settings = {ASSET_TAGS = (); }; };
-		930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */; settings = {ASSET_TAGS = (); }; };
-		930CCFDD1BDC272400B2A422 /* TableViewCellUrbanDesign.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DE61BDC064C009B7963 /* TableViewCellPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE51BDC064C009B7963 /* TableViewCellPlayground.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DEA1BDC084B009B7963 /* TableViewCellRink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE81BDC084B009B7963 /* TableViewCellRink.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE91BDC084B009B7963 /* TableViewCellRink.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DEE1BDC11ED009B7963 /* TableViewCellWorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DEC1BDC11ED009B7963 /* TableViewCellWorship.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */; settings = {ASSET_TAGS = (); }; };
-		93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DF01BDC132C009B7963 /* TableViewCellArt.swift */; settings = {ASSET_TAGS = (); }; };
-		93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DF11BDC132C009B7963 /* TableViewCellArt.xib */; settings = {ASSET_TAGS = (); }; };
+		930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */; };
+		930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */; };
+		930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */; };
+		930CCFDD1BDC272400B2A422 /* TableViewCellUrbanDesign.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */; };
+		93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */; };
+		93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */; };
+		93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */; };
+		93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */; };
+		93387DE61BDC064C009B7963 /* TableViewCellPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */; };
+		93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE51BDC064C009B7963 /* TableViewCellPlayground.xib */; };
+		93387DEA1BDC084B009B7963 /* TableViewCellRink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE81BDC084B009B7963 /* TableViewCellRink.swift */; };
+		93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE91BDC084B009B7963 /* TableViewCellRink.xib */; };
+		93387DEE1BDC11ED009B7963 /* TableViewCellWorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DEC1BDC11ED009B7963 /* TableViewCellWorship.swift */; };
+		93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */; };
+		93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DF01BDC132C009B7963 /* TableViewCellArt.swift */; };
+		93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DF11BDC132C009B7963 /* TableViewCellArt.xib */; };
 		DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC61BDBCA5300742B9A /* AppDelegate.swift */; };
 		DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC81BDBCA5300742B9A /* ViewController.swift */; };
 		DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC169ECA1BDBCA5300742B9A /* Main.storyboard */; };
@@ -70,9 +70,15 @@
 		DC169F2D1BDC03B500742B9A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2B1BDC03B500742B9A /* CameraViewController.swift */; };
 		DC169F2F1BDC059800742B9A /* DetailAttractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */; };
 		DC169F311BDC0C6600742B9A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */; };
+		DC169F351BDC36BE00742B9A /* SingleViewCoreData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DC169F321BDC365D00742B9A /* SingleViewCoreData.sqlite */; };
+		DC169F361BDC36BE00742B9A /* SingleViewCoreData.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = DC169F331BDC365D00742B9A /* SingleViewCoreData.sqlite-shm */; };
+		DC169F371BDC36BE00742B9A /* SingleViewCoreData.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = DC169F341BDC365D00742B9A /* SingleViewCoreData.sqlite-wal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C4D72AA1BDC0892005ECB36 /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = SingleViewCoreData.sqlite; path = ../SingleViewCoreData.sqlite; sourceTree = "<group>"; };
+		2C4D72AB1BDC0892005ECB36 /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SingleViewCoreData.sqlite-shm"; path = "../SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
+		2C4D72AC1BDC0892005ECB36 /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SingleViewCoreData.sqlite-wal"; path = "../SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
 		930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPOI.swift; sourceTree = "<group>"; };
 		930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPOI.xib; sourceTree = "<group>"; };
 		930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUrbanDesign.swift; sourceTree = "<group>"; };
@@ -133,14 +139,14 @@
 		DC169F1F1BDBDFE500742B9A /* ParsePublicArtOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsePublicArtOp.swift; sourceTree = "<group>"; };
 		DC169F211BDBE1F400742B9A /* ParseSportFieldsOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSportFieldsOp.swift; sourceTree = "<group>"; };
 		DC169F231BDBE35600742B9A /* ParseUrbdanDesignAOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUrbdanDesignAOp.swift; sourceTree = "<group>"; };
-		DC169F251BDBF55D00742B9A /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SingleViewCoreData.sqlite; sourceTree = "<group>"; };
-		DC169F261BDBF55D00742B9A /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
-		DC169F271BDBF55D00742B9A /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
 		DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCommunicator.swift; sourceTree = "<group>"; };
 		DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
 		DC169F2B1BDC03B500742B9A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAttractionViewController.swift; sourceTree = "<group>"; };
 		DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		DC169F321BDC365D00742B9A /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SingleViewCoreData.sqlite; sourceTree = "<group>"; };
+		DC169F331BDC365D00742B9A /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
+		DC169F341BDC365D00742B9A /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +244,9 @@
 				DC169EE01BDBCD1800742B9A /* PublicArt.json */,
 				DC169EE11BDBCD1800742B9A /* SportsFieldsDiamonds.json */,
 				DC169EE21BDBCD1800742B9A /* UrbanDesignAwards.json */,
+				2C4D72AA1BDC0892005ECB36 /* SingleViewCoreData.sqlite */,
+				2C4D72AB1BDC0892005ECB36 /* SingleViewCoreData.sqlite-shm */,
+				2C4D72AC1BDC0892005ECB36 /* SingleViewCoreData.sqlite-wal */,
 			);
 			name = JSON;
 			sourceTree = "<group>";
@@ -261,9 +270,9 @@
 				DC169F031BDBD6BC00742B9A /* Art.swift */,
 				DC169F041BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift */,
 				DC169F051BDBD6BC00742B9A /* Playgrounds.swift */,
-				DC169F251BDBF55D00742B9A /* SingleViewCoreData.sqlite */,
-				DC169F261BDBF55D00742B9A /* SingleViewCoreData.sqlite-shm */,
-				DC169F271BDBF55D00742B9A /* SingleViewCoreData.sqlite-wal */,
+				DC169F321BDC365D00742B9A /* SingleViewCoreData.sqlite */,
+				DC169F331BDC365D00742B9A /* SingleViewCoreData.sqlite-shm */,
+				DC169F341BDC365D00742B9A /* SingleViewCoreData.sqlite-wal */,
 			);
 			name = NSManagedObjects;
 			sourceTree = "<group>";
@@ -300,7 +309,7 @@
 				TargetAttributes = {
 					DC169EC21BDBCA5300742B9A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = XFM26W33X8;
+						DevelopmentTeam = CQC8JX8Q4Q;
 					};
 				};
 			};
@@ -327,6 +336,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC169F351BDC36BE00742B9A /* SingleViewCoreData.sqlite in Resources */,
+				DC169F361BDC36BE00742B9A /* SingleViewCoreData.sqlite-shm in Resources */,
+				DC169F371BDC36BE00742B9A /* SingleViewCoreData.sqlite-wal in Resources */,
 				930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */,
 				DC169EE31BDBCD1800742B9A /* OutdoorRinks.json in Resources */,
 				DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */,
