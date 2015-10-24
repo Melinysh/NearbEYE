@@ -101,7 +101,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		if let cell = tableView.dequeueReusableCellWithIdentifier("cell") as? DetailTableViewCell {
 			let propertyName = propertiesList[indexPath.row]
-			cell.propertyTitle.text = propertyName
+			cell.propertyTitle.text =  wordify(propertyName)
 			cell.propertyValue.text  = String(attraction.valueForKey(propertyName)!)
 			
 			return cell
@@ -127,5 +127,20 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
     }
     */
 
+	
+	func wordify(str :String) -> String {
+		var firstword = ""
+		var secondword = ""
+		var toSecondWord = false
+			for ch in str.characters {
+				if (ch >= "A" && ch <= "Z") || toSecondWord {
+					toSecondWord = true
+					secondword += String(ch)
+				} else {
+					firstword += String(ch)
+				}
+			}
+		return firstword.capitalizedString + " " + secondword.capitalizedString
+	}
 
 }
