@@ -49,10 +49,7 @@ class CameraOverlayView: UIView {
             })
         }
     }
-    
-    func refreshAttractions() {
-        
-    }
+
     
     /*
     // Only override drawRect: if you perform custom drawing.

@@ -15,7 +15,7 @@ import CoreData
 extension PlaceOfWorship {
 
     @NSManaged var longitude: NSNumber?
-    @NSManaged var latitutde: NSNumber?
+    @NSManaged var latitude: NSNumber?
     @NSManaged var name: String?
     @NSManaged var address: String?
 	

@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		guard let vc = window?.rootViewController as? CameraViewController else {
 			fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
 		}
-		//vc.context = self.managedObjectContext
+		vc.context = self.managedObjectContext
 		
-//		
+		
 //		let loadRinks = LoadJSONOperation(fileName: "OutdoorRinks")
 //		let loadParks = LoadJSONOperation(fileName: "ParksSpaces")
 //		let loadWorship = LoadJSONOperation(fileName: "PlacesOfWorship")
@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //		
 //		q.addOperations([loadRinks, loadParks, loadWorship, loadPlaygrounds, loadPOI, loadArt, loadField, loadUDA, parseParks, parserinks, parseWorship, parsePlayG, parsePOI, parseArt, parseFieid, parseUDA], waitUntilFinished: false)
 //		
-		
+//		
 		return true
 	}
 

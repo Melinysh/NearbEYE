@@ -48,7 +48,7 @@ class ParseWorshipPlacesOp: Operation {
 				
 				let p = NSEntityDescription.insertNewObjectForEntityForName("PlaceOfWorship", inManagedObjectContext: self.context!) as! PlaceOfWorship
 				p.longitude = coordinates[0]
-				p.latitutde = coordinates[1]
+				p.latitude = coordinates[1]
 				p.name = name
 				p.address = addr
 				print("Added worship")

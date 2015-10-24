@@ -10,6 +10,13 @@ import UIKit
 import CoreData
 import CoreLocation
 
+enum Direction {
+	case North, East, South, West
+}
+
+let kLatitudeRange = 0.05
+let kLongitudeRange = 0.05
+
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource  {
 
     let minimumHeadingChangeForRefresh = 60.0
@@ -19,6 +26,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     var lastHeading : CLHeading!
     var lastLocation : CLLocation!
     var cameraOverlay : CameraOverlayView!
+	
+	var coreDataComm : CoreDataCommunicator!
+	
+	var attractionsNearby = [AnyObject]()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -26,6 +37,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		coreDataComm = CoreDataCommunicator(c: self.context)
         locationManager = CLLocationManager()
         locationManager.delegate = self
         let status = CLLocationManager.authorizationStatus()
@@ -103,7 +115,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         else if (fabs(newHeading.magneticHeading - lastHeading.magneticHeading) >= minimumHeadingChangeForRefresh) {
             lastHeading = newHeading
-            cameraOverlay.refreshAttractions()
+            refreshAttractions()
             print(lastHeading)
         }
     }
@@ -114,7 +126,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
-            cameraOverlay.refreshAttractions()
+			
+			refreshAttractions()
             print(lastLocation)
         }
     }
@@ -122,15 +135,20 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //#MARK: tableView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        //TODO implement stephen's methods
         return 80
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //TODO implement stephen's methods
         if let cell = tableView.dequeueReusableCellWithIdentifier("attraction") {
-            cell.textLabel?.text = "Generic Attraction"
-            cell.detailTextLabel?.text = "Prototype Content"
+			let attraction = attractionsNearby[indexPath.row]
+			if let n = attraction.valueForKey("name") as? String {
+				cell.textLabel?.text = n
+			} else {
+				cell.textLabel?.text =  wordify(NSStringFromClass(attraction.dynamicType))
+			}
+			//	cell.detailTextLabel?.text = "Prototype Content"
+
             cell.backgroundColor = UIColor.clearColor()
             return cell
         }
@@ -142,11 +160,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         presentDetailViewControllerForAttraction(nil)
         //TODO segue to detail vc
+		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+		vc.attraction = attractionsNearby[indexPath.row]
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-        //TODO implement stephen's methods
+        return attractionsNearby.count
     }
     
 
@@ -162,5 +181,71 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
 
+	func wordify(str :String) -> String {
+		var firstword = ""
+		var secondword = ""
+		var toSecondWord = false
+		for ch in str.characters {
+			if (ch >= "A" && ch <= "Z") || toSecondWord {
+				toSecondWord = true
+				secondword += String(ch)
+			} else {
+				firstword += String(ch)
+			}
+		}
+		return firstword.capitalizedString + " " + secondword.capitalizedString
+	}
+	
+	// MARK: - Attraction Finding Methods
+	func refreshAttractions() {
+		let dir = directionForHeading(lastHeading)
+		let latOffset = latitudeOffset(lastLocation.coordinate, dir: dir)
+		let longOffset = longitudeOffset(lastLocation.coordinate, dir: dir)
+	
+		let maxLat = lastLocation.coordinate.latitude + latOffset.0
+		let minLat = lastLocation.coordinate.latitude + latOffset.1
+		let maxLong = lastLocation.coordinate.longitude + longOffset.0
+		let minLong = lastLocation.coordinate.longitude + longOffset.1
+		print("Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
+		
+		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
+		cameraOverlay.attractionsList.reloadData()
+	}
+	
+	func latitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
+		if (dir == .North || dir == .South) {
+			return (kLatitudeRange, -kLatitudeRange)
+		}
+		if (dir == .East) {
+			return (2 * kLatitudeRange, 0)
+		} else {
+			return (0, 2 * kLatitudeRange)
+		}
+	}
+	
+	func longitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
+		if (dir == .East || dir == .West) {
+			return (kLongitudeRange, -kLongitudeRange)
+		}
+		if (dir == .North) {
+			return (2 * kLongitudeRange, 0)
+		} else {
+			return (0, 2 * kLongitudeRange)
+		}
+	}
+	
+	
+	func directionForHeading(heading : CLHeading) -> Direction {
+		if (heading.trueHeading >= 0 && heading.trueHeading < 45) || heading.trueHeading > 315 {
+			return Direction.North
+		} else if (heading.trueHeading >= 45 && heading.trueHeading < 135){
+			return .East
+		} else if (heading.trueHeading >= 135 && heading.trueHeading < 225) {
+			return .South
+		} else {
+			return .West
+		}
+	}
+	
 }
 
