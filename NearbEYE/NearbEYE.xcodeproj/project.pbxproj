@@ -52,6 +52,8 @@
 		DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */; };
 		DC169F2C1BDC03B500742B9A /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */; };
 		DC169F2D1BDC03B500742B9A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2B1BDC03B500742B9A /* CameraViewController.swift */; };
+		DC169F2F1BDC059800742B9A /* DetailAttractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */; };
+		DC169F311BDC0C6600742B9A /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,8 @@
 		DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCommunicator.swift; sourceTree = "<group>"; };
 		DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraOverlayView.swift; sourceTree = "<group>"; };
 		DC169F2B1BDC03B500742B9A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAttractionViewController.swift; sourceTree = "<group>"; };
+		DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 				DC169EC81BDBCA5300742B9A /* ViewController.swift */,
 				DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */,
 				DC169ECA1BDBCA5300742B9A /* Main.storyboard */,
+				DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */,
+				DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */,
 				DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */,
 				DC169F2B1BDC03B500742B9A /* CameraViewController.swift */,
 				DC169EEB1BDBCD1D00742B9A /* JSON */,
@@ -303,6 +309,7 @@
 				DC169F0F1BDBD6BC00742B9A /* Park.swift in Sources */,
 				DC169F101BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift in Sources */,
 				DC169F0E1BDBD6BC00742B9A /* Park+CoreDataProperties.swift in Sources */,
+				DC169F311BDC0C6600742B9A /* DetailTableViewCell.swift in Sources */,
 				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
 				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
@@ -312,6 +319,7 @@
 				DC169F201BDBDFE500742B9A /* ParsePublicArtOp.swift in Sources */,
 				DC169F221BDBE1F400742B9A /* ParseSportFieldsOp.swift in Sources */,
 				DC169F091BDBD6BC00742B9A /* SportField.swift in Sources */,
+				DC169F2F1BDC059800742B9A /* DetailAttractionViewController.swift in Sources */,
 				DC169F071BDBD6BC00742B9A /* PointOfInterest.swift in Sources */,
 				DC169F131BDBD6BC00742B9A /* Art.swift in Sources */,
 				DC169EF51BDBD54B00742B9A /* ParseRinksOp.swift in Sources */,

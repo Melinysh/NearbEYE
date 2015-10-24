@@ -19,5 +19,8 @@ extension PlaceOfWorship {
     @NSManaged var name: String?
     @NSManaged var address: String?
 	
+	func propertyList() -> [String] {
+		return ["name", "address"]
+	}
 
 }
