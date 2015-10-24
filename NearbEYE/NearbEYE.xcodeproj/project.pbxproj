@@ -13,6 +13,43 @@
 		DC169ECF1BDBCA5300742B9A /* NearbEYE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC169ECD1BDBCA5300742B9A /* NearbEYE.xcdatamodeld */; };
 		DC169ED11BDBCA5300742B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC169ED01BDBCA5300742B9A /* Assets.xcassets */; };
 		DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC169ED21BDBCA5300742B9A /* LaunchScreen.storyboard */; };
+		DC169EE31BDBCD1800742B9A /* OutdoorRinks.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EDB1BDBCD1800742B9A /* OutdoorRinks.json */; };
+		DC169EE41BDBCD1800742B9A /* ParksSpaces.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EDC1BDBCD1800742B9A /* ParksSpaces.json */; };
+		DC169EE51BDBCD1800742B9A /* PlacesOfWorship.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EDD1BDBCD1800742B9A /* PlacesOfWorship.json */; };
+		DC169EE61BDBCD1800742B9A /* Playgrounds.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EDE1BDBCD1800742B9A /* Playgrounds.json */; };
+		DC169EE71BDBCD1800742B9A /* PointsOfInterest.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EDF1BDBCD1800742B9A /* PointsOfInterest.json */; };
+		DC169EE81BDBCD1800742B9A /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EE01BDBCD1800742B9A /* PublicArt.json */; };
+		DC169EE91BDBCD1800742B9A /* SportsFieldsDiamonds.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EE11BDBCD1800742B9A /* SportsFieldsDiamonds.json */; };
+		DC169EEA1BDBCD1800742B9A /* UrbanDesignAwards.json in Resources */ = {isa = PBXBuildFile; fileRef = DC169EE21BDBCD1800742B9A /* UrbanDesignAwards.json */; };
+		DC169EEE1BDBD45E00742B9A /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EEC1BDBD45E00742B9A /* Operation.swift */; };
+		DC169EEF1BDBD45E00742B9A /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EED1BDBD45E00742B9A /* OperationQueue.swift */; };
+		DC169EF11BDBD47B00742B9A /* LoadJSONOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF01BDBD47B00742B9A /* LoadJSONOperation.swift */; };
+		DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF21BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift */; };
+		DC169EF51BDBD54B00742B9A /* ParseRinksOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF41BDBD54B00742B9A /* ParseRinksOp.swift */; };
+		DC169F061BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF61BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift */; };
+		DC169F071BDBD6BC00742B9A /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF71BDBD6BC00742B9A /* PointOfInterest.swift */; };
+		DC169F081BDBD6BC00742B9A /* SportField+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF81BDBD6BC00742B9A /* SportField+CoreDataProperties.swift */; };
+		DC169F091BDBD6BC00742B9A /* SportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EF91BDBD6BC00742B9A /* SportField.swift */; };
+		DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFA1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift */; };
+		DC169F0B1BDBD6BC00742B9A /* PlacesOfWorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFB1BDBD6BC00742B9A /* PlacesOfWorship.swift */; };
+		DC169F0C1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFC1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift */; };
+		DC169F0D1BDBD6BC00742B9A /* Rink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFD1BDBD6BC00742B9A /* Rink.swift */; };
+		DC169F0E1BDBD6BC00742B9A /* Park+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFE1BDBD6BC00742B9A /* Park+CoreDataProperties.swift */; };
+		DC169F0F1BDBD6BC00742B9A /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EFF1BDBD6BC00742B9A /* Park.swift */; };
+		DC169F101BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F001BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift */; };
+		DC169F111BDBD6BC00742B9A /* UrbanDesignAward.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F011BDBD6BC00742B9A /* UrbanDesignAward.swift */; };
+		DC169F121BDBD6BC00742B9A /* Art+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F021BDBD6BC00742B9A /* Art+CoreDataProperties.swift */; };
+		DC169F131BDBD6BC00742B9A /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F031BDBD6BC00742B9A /* Art.swift */; };
+		DC169F141BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F041BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift */; };
+		DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F051BDBD6BC00742B9A /* Playgrounds.swift */; };
+		DC169F181BDBD82A00742B9A /* ParseParksOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F171BDBD82A00742B9A /* ParseParksOp.swift */; };
+		DC169F1A1BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F191BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift */; };
+		DC169F1C1BDBDD2800742B9A /* ParsePlayGroundsOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F1B1BDBDD2800742B9A /* ParsePlayGroundsOp.swift */; };
+		DC169F1E1BDBDF4C00742B9A /* ParsePOIsOP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F1D1BDBDF4C00742B9A /* ParsePOIsOP.swift */; };
+		DC169F201BDBDFE500742B9A /* ParsePublicArtOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F1F1BDBDFE500742B9A /* ParsePublicArtOp.swift */; };
+		DC169F221BDBE1F400742B9A /* ParseSportFieldsOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F211BDBE1F400742B9A /* ParseSportFieldsOp.swift */; };
+		DC169F241BDBE35600742B9A /* ParseUrbdanDesignAOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F231BDBE35600742B9A /* ParseUrbdanDesignAOp.swift */; };
+		DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +61,46 @@
 		DC169ED01BDBCA5300742B9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC169ED31BDBCA5300742B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC169ED51BDBCA5300742B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC169EDB1BDBCD1800742B9A /* OutdoorRinks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OutdoorRinks.json; sourceTree = "<group>"; };
+		DC169EDC1BDBCD1800742B9A /* ParksSpaces.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ParksSpaces.json; sourceTree = "<group>"; };
+		DC169EDD1BDBCD1800742B9A /* PlacesOfWorship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlacesOfWorship.json; sourceTree = "<group>"; };
+		DC169EDE1BDBCD1800742B9A /* Playgrounds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Playgrounds.json; sourceTree = "<group>"; };
+		DC169EDF1BDBCD1800742B9A /* PointsOfInterest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PointsOfInterest.json; sourceTree = "<group>"; };
+		DC169EE01BDBCD1800742B9A /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		DC169EE11BDBCD1800742B9A /* SportsFieldsDiamonds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SportsFieldsDiamonds.json; sourceTree = "<group>"; };
+		DC169EE21BDBCD1800742B9A /* UrbanDesignAwards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UrbanDesignAwards.json; sourceTree = "<group>"; };
+		DC169EEC1BDBD45E00742B9A /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		DC169EED1BDBD45E00742B9A /* OperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
+		DC169EF01BDBD47B00742B9A /* LoadJSONOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadJSONOperation.swift; sourceTree = "<group>"; };
+		DC169EF21BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonsFromJSONOperation.swift; sourceTree = "<group>"; };
+		DC169EF41BDBD54B00742B9A /* ParseRinksOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseRinksOp.swift; sourceTree = "<group>"; };
+		DC169EF61BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PointOfInterest+CoreDataProperties.swift"; path = "NearbEYE/PointOfInterest+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169EF71BDBD6BC00742B9A /* PointOfInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointOfInterest.swift; path = NearbEYE/PointOfInterest.swift; sourceTree = "<group>"; };
+		DC169EF81BDBD6BC00742B9A /* SportField+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SportField+CoreDataProperties.swift"; path = "NearbEYE/SportField+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169EF91BDBD6BC00742B9A /* SportField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SportField.swift; path = NearbEYE/SportField.swift; sourceTree = "<group>"; };
+		DC169EFA1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PlacesOfWorship+CoreDataProperties.swift"; path = "NearbEYE/PlacesOfWorship+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169EFB1BDBD6BC00742B9A /* PlacesOfWorship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesOfWorship.swift; path = NearbEYE/PlacesOfWorship.swift; sourceTree = "<group>"; };
+		DC169EFC1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Rink+CoreDataProperties.swift"; path = "NearbEYE/Rink+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169EFD1BDBD6BC00742B9A /* Rink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Rink.swift; path = NearbEYE/Rink.swift; sourceTree = "<group>"; };
+		DC169EFE1BDBD6BC00742B9A /* Park+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Park+CoreDataProperties.swift"; path = "NearbEYE/Park+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169EFF1BDBD6BC00742B9A /* Park.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Park.swift; path = NearbEYE/Park.swift; sourceTree = "<group>"; };
+		DC169F001BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UrbanDesignAward+CoreDataProperties.swift"; path = "NearbEYE/UrbanDesignAward+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169F011BDBD6BC00742B9A /* UrbanDesignAward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrbanDesignAward.swift; path = NearbEYE/UrbanDesignAward.swift; sourceTree = "<group>"; };
+		DC169F021BDBD6BC00742B9A /* Art+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Art+CoreDataProperties.swift"; path = "NearbEYE/Art+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169F031BDBD6BC00742B9A /* Art.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Art.swift; path = NearbEYE/Art.swift; sourceTree = "<group>"; };
+		DC169F041BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Playgrounds+CoreDataProperties.swift"; path = "NearbEYE/Playgrounds+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DC169F051BDBD6BC00742B9A /* Playgrounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Playgrounds.swift; path = NearbEYE/Playgrounds.swift; sourceTree = "<group>"; };
+		DC169F171BDBD82A00742B9A /* ParseParksOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseParksOp.swift; path = ../ParseParksOp.swift; sourceTree = "<group>"; };
+		DC169F191BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseWorshipPlacesOp.swift; sourceTree = "<group>"; };
+		DC169F1B1BDBDD2800742B9A /* ParsePlayGroundsOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsePlayGroundsOp.swift; sourceTree = "<group>"; };
+		DC169F1D1BDBDF4C00742B9A /* ParsePOIsOP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsePOIsOP.swift; sourceTree = "<group>"; };
+		DC169F1F1BDBDFE500742B9A /* ParsePublicArtOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsePublicArtOp.swift; sourceTree = "<group>"; };
+		DC169F211BDBE1F400742B9A /* ParseSportFieldsOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSportFieldsOp.swift; sourceTree = "<group>"; };
+		DC169F231BDBE35600742B9A /* ParseUrbdanDesignAOp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseUrbdanDesignAOp.swift; sourceTree = "<group>"; };
+		DC169F251BDBF55D00742B9A /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = SingleViewCoreData.sqlite; sourceTree = "<group>"; };
+		DC169F261BDBF55D00742B9A /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
+		DC169F271BDBF55D00742B9A /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
+		DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCommunicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +117,7 @@
 		DC169EBA1BDBCA5300742B9A = {
 			isa = PBXGroup;
 			children = (
+				DC169F161BDBD6C100742B9A /* NSManagedObjects */,
 				DC169EC51BDBCA5300742B9A /* NearbEYE */,
 				DC169EC41BDBCA5300742B9A /* Products */,
 			);
@@ -58,13 +136,68 @@
 			children = (
 				DC169EC61BDBCA5300742B9A /* AppDelegate.swift */,
 				DC169EC81BDBCA5300742B9A /* ViewController.swift */,
+				DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */,
 				DC169ECA1BDBCA5300742B9A /* Main.storyboard */,
+				DC169EEB1BDBCD1D00742B9A /* JSON */,
 				DC169ED01BDBCA5300742B9A /* Assets.xcassets */,
 				DC169ED21BDBCA5300742B9A /* LaunchScreen.storyboard */,
 				DC169ED51BDBCA5300742B9A /* Info.plist */,
 				DC169ECD1BDBCA5300742B9A /* NearbEYE.xcdatamodeld */,
+				DC169EEC1BDBD45E00742B9A /* Operation.swift */,
+				DC169EF01BDBD47B00742B9A /* LoadJSONOperation.swift */,
+				DC169F171BDBD82A00742B9A /* ParseParksOp.swift */,
+				DC169EF41BDBD54B00742B9A /* ParseRinksOp.swift */,
+				DC169F211BDBE1F400742B9A /* ParseSportFieldsOp.swift */,
+				DC169F231BDBE35600742B9A /* ParseUrbdanDesignAOp.swift */,
+				DC169F1D1BDBDF4C00742B9A /* ParsePOIsOP.swift */,
+				DC169F1B1BDBDD2800742B9A /* ParsePlayGroundsOp.swift */,
+				DC169F1F1BDBDFE500742B9A /* ParsePublicArtOp.swift */,
+				DC169F191BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift */,
+				DC169EF21BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift */,
+				DC169EED1BDBD45E00742B9A /* OperationQueue.swift */,
 			);
 			path = NearbEYE;
+			sourceTree = "<group>";
+		};
+		DC169EEB1BDBCD1D00742B9A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				DC169EDB1BDBCD1800742B9A /* OutdoorRinks.json */,
+				DC169EDC1BDBCD1800742B9A /* ParksSpaces.json */,
+				DC169EDD1BDBCD1800742B9A /* PlacesOfWorship.json */,
+				DC169EDE1BDBCD1800742B9A /* Playgrounds.json */,
+				DC169EDF1BDBCD1800742B9A /* PointsOfInterest.json */,
+				DC169EE01BDBCD1800742B9A /* PublicArt.json */,
+				DC169EE11BDBCD1800742B9A /* SportsFieldsDiamonds.json */,
+				DC169EE21BDBCD1800742B9A /* UrbanDesignAwards.json */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		DC169F161BDBD6C100742B9A /* NSManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				DC169EF61BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift */,
+				DC169EF71BDBD6BC00742B9A /* PointOfInterest.swift */,
+				DC169EF81BDBD6BC00742B9A /* SportField+CoreDataProperties.swift */,
+				DC169EF91BDBD6BC00742B9A /* SportField.swift */,
+				DC169EFA1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift */,
+				DC169EFB1BDBD6BC00742B9A /* PlacesOfWorship.swift */,
+				DC169EFC1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift */,
+				DC169EFD1BDBD6BC00742B9A /* Rink.swift */,
+				DC169EFE1BDBD6BC00742B9A /* Park+CoreDataProperties.swift */,
+				DC169EFF1BDBD6BC00742B9A /* Park.swift */,
+				DC169F001BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift */,
+				DC169F011BDBD6BC00742B9A /* UrbanDesignAward.swift */,
+				DC169F021BDBD6BC00742B9A /* Art+CoreDataProperties.swift */,
+				DC169F031BDBD6BC00742B9A /* Art.swift */,
+				DC169F041BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift */,
+				DC169F051BDBD6BC00742B9A /* Playgrounds.swift */,
+				DC169F251BDBF55D00742B9A /* SingleViewCoreData.sqlite */,
+				DC169F261BDBF55D00742B9A /* SingleViewCoreData.sqlite-shm */,
+				DC169F271BDBF55D00742B9A /* SingleViewCoreData.sqlite-wal */,
+			);
+			name = NSManagedObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +258,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC169EE31BDBCD1800742B9A /* OutdoorRinks.json in Resources */,
 				DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */,
 				DC169ED11BDBCA5300742B9A /* Assets.xcassets in Resources */,
+				DC169EE71BDBCD1800742B9A /* PointsOfInterest.json in Resources */,
+				DC169EE91BDBCD1800742B9A /* SportsFieldsDiamonds.json in Resources */,
+				DC169EE61BDBCD1800742B9A /* Playgrounds.json in Resources */,
+				DC169EE81BDBCD1800742B9A /* PublicArt.json in Resources */,
+				DC169EEA1BDBCD1800742B9A /* UrbanDesignAwards.json in Resources */,
+				DC169EE51BDBCD1800742B9A /* PlacesOfWorship.json in Resources */,
+				DC169EE41BDBCD1800742B9A /* ParksSpaces.json in Resources */,
 				DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +280,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */,
+				DC169F1E1BDBDF4C00742B9A /* ParsePOIsOP.swift in Sources */,
+				DC169F1A1BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift in Sources */,
 				DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */,
+				DC169F1C1BDBDD2800742B9A /* ParsePlayGroundsOp.swift in Sources */,
 				DC169ECF1BDBCA5300742B9A /* NearbEYE.xcdatamodeld in Sources */,
+				DC169F0B1BDBD6BC00742B9A /* PlacesOfWorship.swift in Sources */,
+				DC169EF11BDBD47B00742B9A /* LoadJSONOperation.swift in Sources */,
+				DC169F141BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift in Sources */,
+				DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */,
+				DC169EEE1BDBD45E00742B9A /* Operation.swift in Sources */,
+				DC169F121BDBD6BC00742B9A /* Art+CoreDataProperties.swift in Sources */,
+				DC169F061BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift in Sources */,
+				DC169F0F1BDBD6BC00742B9A /* Park.swift in Sources */,
+				DC169F101BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift in Sources */,
+				DC169F0E1BDBD6BC00742B9A /* Park+CoreDataProperties.swift in Sources */,
+				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
+				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
+				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
+				DC169F181BDBD82A00742B9A /* ParseParksOp.swift in Sources */,
+				DC169F0D1BDBD6BC00742B9A /* Rink.swift in Sources */,
+				DC169F0C1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift in Sources */,
+				DC169F201BDBDFE500742B9A /* ParsePublicArtOp.swift in Sources */,
+				DC169F221BDBE1F400742B9A /* ParseSportFieldsOp.swift in Sources */,
+				DC169F091BDBD6BC00742B9A /* SportField.swift in Sources */,
+				DC169F071BDBD6BC00742B9A /* PointOfInterest.swift in Sources */,
+				DC169F131BDBD6BC00742B9A /* Art.swift in Sources */,
+				DC169EF51BDBD54B00742B9A /* ParseRinksOp.swift in Sources */,
+				DC169F081BDBD6BC00742B9A /* SportField+CoreDataProperties.swift in Sources */,
+				DC169F241BDBE35600742B9A /* ParseUrbdanDesignAOp.swift in Sources */,
+				DC169F111BDBD6BC00742B9A /* UrbanDesignAward.swift in Sources */,
+				DC169EEF1BDBD45E00742B9A /* OperationQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
