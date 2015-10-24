@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(PlacesOfWorship)
+@objc(PlaceOfWorship)
 
 class PlaceOfWorship: NSManagedObject {
 

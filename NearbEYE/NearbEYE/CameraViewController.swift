@@ -138,7 +138,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -231,8 +231,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		let minLat = lastLocation.coordinate.latitude + latOffset.1
 		let maxLong = lastLocation.coordinate.longitude + longOffset.0
 		let minLong = lastLocation.coordinate.longitude + longOffset.1
-		print("Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
-		
+		print("\(dir)  Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
 		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
 		cameraOverlay.attractionsList.reloadData()
 	}
