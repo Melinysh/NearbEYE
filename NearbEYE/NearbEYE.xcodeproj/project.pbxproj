@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */; settings = {ASSET_TAGS = (); }; };
+		930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */; settings = {ASSET_TAGS = (); }; };
+		930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */; settings = {ASSET_TAGS = (); }; };
+		930CCFDD1BDC272400B2A422 /* TableViewCellUrbanDesign.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */; settings = {ASSET_TAGS = (); }; };
 		93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */; settings = {ASSET_TAGS = (); }; };
 		93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */; settings = {ASSET_TAGS = (); }; };
 		93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */; settings = {ASSET_TAGS = (); }; };
@@ -69,6 +73,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPOI.swift; sourceTree = "<group>"; };
+		930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPOI.xib; sourceTree = "<group>"; };
+		930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUrbanDesign.swift; sourceTree = "<group>"; };
+		930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUrbanDesign.xib; sourceTree = "<group>"; };
 		93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellParks.swift; sourceTree = "<group>"; };
 		93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellParks.xib; sourceTree = "<group>"; };
 		93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSportField.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */,
 				93387DF01BDC132C009B7963 /* TableViewCellArt.swift */,
 				93387DF11BDC132C009B7963 /* TableViewCellArt.xib */,
+				930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */,
+				930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */,
+				930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */,
+				930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -315,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */,
 				DC169EE31BDBCD1800742B9A /* OutdoorRinks.json in Resources */,
 				DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */,
 				DC169ED11BDBCA5300742B9A /* Assets.xcassets in Resources */,
@@ -330,6 +343,7 @@
 				DC169EE81BDBCD1800742B9A /* PublicArt.json in Resources */,
 				DC169EEA1BDBCD1800742B9A /* UrbanDesignAwards.json in Resources */,
 				DC169EE51BDBCD1800742B9A /* PlacesOfWorship.json in Resources */,
+				930CCFDD1BDC272400B2A422 /* TableViewCellUrbanDesign.xib in Resources */,
 				DC169EE41BDBCD1800742B9A /* ParksSpaces.json in Resources */,
 				DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */,
 			);
@@ -368,6 +382,8 @@
 				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
 				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
+				930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */,
+				930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */,
 				93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */,
 				DC169F181BDBD82A00742B9A /* ParseParksOp.swift in Sources */,
 				DC169F0D1BDBD6BC00742B9A /* Rink.swift in Sources */,

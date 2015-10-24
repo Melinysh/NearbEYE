@@ -69,9 +69,6 @@
                 <outlet property="artNameLabel" destination="fW7-hr-j2i" id="5oR-tL-GjG"/>
                 <outlet property="artURLLabel" destination="smu-B4-Q2F" id="gts-l5-h61"/>
                 <outlet property="artYearLabel" destination="Ed0-5O-D9I" id="cQr-WL-SfU"/>
-                <outlet property="parkAddressLabel" destination="S63-HR-ivI" id="h9M-yc-ize"/>
-                <outlet property="parkNameLabel" destination="fW7-hr-j2i" id="u19-N4-UAc"/>
-                <outlet property="parkWashroomLabel" destination="smu-B4-Q2F" id="ynM-q2-IXU"/>
             </connections>
             <point key="canvasLocation" x="121" y="9"/>
         </tableViewCell>
