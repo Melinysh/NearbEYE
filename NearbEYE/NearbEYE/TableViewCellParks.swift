@@ -24,9 +24,9 @@ class TableViewCellParks: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureCell(cell : TableViewCellParks, data : Park) {
-        parkNameLabel.text = (data.name)
-        parkAddressLabel.text = (data.address)
-        parkWashroomLabel.text = "Number of washrooms : " + String(data.washrooms)
+    static func configureCell(cell : TableViewCellParks, data : Park) {
+        cell.parkNameLabel.text = (data.name)
+        cell.parkAddressLabel.text = (data.address)
+        cell.parkWashroomLabel.text = "Number of washrooms : " + String(data.washrooms)
     }
 }
