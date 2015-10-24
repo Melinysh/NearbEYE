@@ -13,10 +13,64 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	let q = OperationQueue()
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		guard let vc = window?.rootViewController as? ViewController else {
+			fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
+		}
+		vc.context = self.managedObjectContext
+		
+//		
+//		let loadRinks = LoadJSONOperation(fileName: "OutdoorRinks")
+//		let loadParks = LoadJSONOperation(fileName: "ParksSpaces")
+//		let loadWorship = LoadJSONOperation(fileName: "PlacesOfWorship")
+//		let loadPlaygrounds = LoadJSONOperation(fileName: "Playgrounds")
+//		let loadPOI = LoadJSONOperation(fileName: "PointsOfInterest")
+//		let loadArt = LoadJSONOperation(fileName: "PublicArt")
+//		let loadField = LoadJSONOperation(fileName: "SportsFieldsDiamonds")
+//		let loadUDA = LoadJSONOperation(fileName: "UrbanDesignAwards")
+//		
+//		let parseParks = ParseParksOp(loadJSONOp: loadParks)
+//		parseParks.context = self.managedObjectContext
+//		
+//		parseParks.addDependency(loadParks)
+//		let parserinks = ParseRinksOp(loadJSONOp: loadRinks)
+//		parserinks.context = self.managedObjectContext
+//		parserinks.addDependency(loadRinks)
+//		
+//		let parseWorship = ParseWorshipPlacesOp(loadJSONOp: loadWorship)
+//		parseWorship.context = self.managedObjectContext
+//
+//		parseWorship.addDependency(loadWorship)
+//		let parsePlayG = ParsePlayGroundsOp(loadJSONOp: loadPlaygrounds)
+//		parsePlayG.context = self.managedObjectContext
+//
+//		parsePlayG.addDependency(loadPlaygrounds)
+//		let parsePOI = ParsePOIsOP(loadJSONOp: loadPOI)
+//		parsePOI.context = self.managedObjectContext
+//		parsePOI.addDependency(loadPOI)
+//		
+//		let parseArt = ParsePublicArtOp(loadJSONOp: loadArt)
+//		parseArt.context = self.managedObjectContext
+//		parseArt.addDependency(loadArt)
+//		
+//		let parseFieid = ParseSportFieldsOp(loadJSONOp: loadField)
+//		parseFieid.context = self.managedObjectContext
+//		parseFieid.addDependency(loadField)
+//		
+//		let parseUDA = ParseUrbdanDesignAOp(loadJSONOp: loadUDA)
+//		parseUDA.context = self.managedObjectContext
+//
+//		parseUDA.addDependency(loadUDA)
+//		
+//		
+//		q.addOperations([loadRinks, loadParks, loadWorship, loadPlaygrounds, loadPOI, loadArt, loadField, loadUDA, parseParks, parserinks, parseWorship, parsePlayG, parsePOI, parseArt, parseFieid, parseUDA], waitUntilFinished: false)
+//		
+		
 		return true
 	}
 
@@ -61,25 +115,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
 	    // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it. This property is optional since there are legitimate error conditions that could cause the creation of the store to fail.
 	    // Create the coordinator and store
-	    let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
-	    let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
-	    var failureReason = "There was an error creating or loading the application's saved data."
-	    do {
-	        try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
-	    } catch {
-	        // Report any error we got.
-	        var dict = [String: AnyObject]()
-	        dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
-	        dict[NSLocalizedFailureReasonErrorKey] = failureReason
+		let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+		let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+		
+		if !NSFileManager.defaultManager().fileExistsAtPath(url.path!) {
+			let sourceSqliteURLs = [NSBundle.mainBundle().URLForResource("SingleViewCoreData", withExtension: "sqlite")!, NSBundle.mainBundle().URLForResource("SingleViewCoreData", withExtension: "sqlite-wal")!, NSBundle.mainBundle().URLForResource("SingleViewCoreData", withExtension: "sqlite-shm")!]
+			
+			let destSqliteURLs = [self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite"),
+				self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite-wal"),
+				self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite-shm")]
+			
+			var error:NSError? = nil
+			for var index = 0; index < sourceSqliteURLs.count; index++ {
+				try! NSFileManager.defaultManager().copyItemAtURL(sourceSqliteURLs[index], toURL: destSqliteURLs[index])
+			}
+		}
+		
+		var failureReason = "There was an error creating or loading the application's saved data."
+		do {
+			try coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
+		} catch {
+			// Report any error we got.
+			var dict = [String: AnyObject]()
+			dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data"
+			dict[NSLocalizedFailureReasonErrorKey] = failureReason
+			
+			dict[NSUnderlyingErrorKey] = error as NSError
+			let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
+			// Replace this with code to handle the error appropriately.
+			// abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+			NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
+			abort()
+		}
 
-	        dict[NSUnderlyingErrorKey] = error as NSError
-	        let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict)
-	        // Replace this with code to handle the error appropriately.
-	        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	        NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-	        abort()
-	    }
-	    
 	    return coordinator
 	}()
 
