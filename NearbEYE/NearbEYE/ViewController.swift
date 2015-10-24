@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     //MARK: Properties
 
     @IBOutlet weak var nameTextField: UITextField!
@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mealNameLabel: UITextField!
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		nameTextField.delegate = self
 	}
 
 	override func didReceiveMemoryWarning() {
