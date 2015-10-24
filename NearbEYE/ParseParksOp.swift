@@ -113,7 +113,7 @@ class ParseParksOp: Operation {
 						p.latitude = coordinates[0][0][0][0][1]
 					}
 					
-										p.name = name
+                    p.name = name
 					p.playgrounds = Int(playgrounds)
 					p.bridges = bridges
 					p.benches = benches

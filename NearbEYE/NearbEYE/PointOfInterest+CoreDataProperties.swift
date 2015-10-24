@@ -20,4 +20,9 @@ extension PointOfInterest {
     @NSManaged var type: String?
     @NSManaged var owner: String?
 
+	
+	func propertList() -> [String] {
+		return ["name","type","owner"]
+	}
+	
 }

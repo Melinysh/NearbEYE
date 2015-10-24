@@ -20,4 +20,7 @@ extension Rink {
     @NSManaged var schedule_url: String?
     @NSManaged var desc: String?
 
+	func propertyList() -> [String] {
+		return ["name", "desc", "schedule_url"]
+	}
 }

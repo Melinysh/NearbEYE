@@ -18,4 +18,9 @@ extension Playground {
     @NSManaged var latitude: NSNumber?
     @NSManaged var name: String?
 
+	
+	func propertyList() -> [String] {
+		return ["name"]
+	}
+	
 }
