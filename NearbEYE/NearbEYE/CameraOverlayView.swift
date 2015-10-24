@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CameraOverlayView: UIView, UITableViewDelegate, UITableViewDataSource {
+class CameraOverlayView: UIView {
 
     var attractionsList : UITableView!
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, vc: CameraViewController) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
-        configureTableView()
+        configureTableView(vc)
         let swipeRecog = UISwipeGestureRecognizer(target: self, action: "hideOrShowTableView:")
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Up
         self.addGestureRecognizer(swipeRecog)
@@ -24,6 +24,15 @@ class CameraOverlayView: UIView, UITableViewDelegate, UITableViewDataSource {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func configureTableView(vc: CameraViewController) {
+        attractionsList = UITableView(frame: CGRectMake(20, self.frame.height / 2 - 60, self.frame.width - 40, self.frame.height / 2 + 60), style: UITableViewStyle.Plain)
+        attractionsList.delegate = vc
+        attractionsList.dataSource = vc
+        attractionsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "attraction")
+        attractionsList.backgroundColor = UIColor.clearColor()
+        self.addSubview(attractionsList)
     }
     
     func hideOrShowTableView(recog: UISwipeGestureRecognizer) {
@@ -41,35 +50,8 @@ class CameraOverlayView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func configureTableView() {
-        attractionsList = UITableView(frame: CGRectMake(20, self.frame.height / 2 - 60, self.frame.width - 40, self.frame.height / 2 + 60), style: UITableViewStyle.Plain)
-        attractionsList.delegate = self
-        attractionsList.dataSource = self
-        attractionsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "attraction")
-        attractionsList.backgroundColor = UIColor.clearColor()
-        self.addSubview(attractionsList)
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        //TODO implement stephen's methods
-        return 80
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //TODO implement stephen's methods
-        if let cell = attractionsList.dequeueReusableCellWithIdentifier("attraction") {
-            cell.textLabel?.text = "Generic Attraction"
-            cell.detailTextLabel?.text = "Prototype Content"
-            cell.backgroundColor = UIColor.clearColor()
-            return cell
-        }
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "attraction")
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
-        //TODO implement stephen's methods
+    func refreshAttractions() {
+        
     }
     
     /*
