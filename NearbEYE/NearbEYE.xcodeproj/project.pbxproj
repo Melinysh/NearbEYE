@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */; settings = {ASSET_TAGS = (); }; };
+		93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */; settings = {ASSET_TAGS = (); }; };
+		93387DE61BDC064C009B7963 /* TableViewCellPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE51BDC064C009B7963 /* TableViewCellPlayground.xib */; settings = {ASSET_TAGS = (); }; };
+		93387DEA1BDC084B009B7963 /* TableViewCellRink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE81BDC084B009B7963 /* TableViewCellRink.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE91BDC084B009B7963 /* TableViewCellRink.xib */; settings = {ASSET_TAGS = (); }; };
+		93387DEE1BDC11ED009B7963 /* TableViewCellWorship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DEC1BDC11ED009B7963 /* TableViewCellWorship.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */; settings = {ASSET_TAGS = (); }; };
+		93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DF01BDC132C009B7963 /* TableViewCellArt.swift */; settings = {ASSET_TAGS = (); }; };
+		93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DF11BDC132C009B7963 /* TableViewCellArt.xib */; settings = {ASSET_TAGS = (); }; };
 		DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC61BDBCA5300742B9A /* AppDelegate.swift */; };
 		DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC81BDBCA5300742B9A /* ViewController.swift */; };
 		DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC169ECA1BDBCA5300742B9A /* Main.storyboard */; };
@@ -53,6 +65,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellParks.swift; sourceTree = "<group>"; };
+		93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellParks.xib; sourceTree = "<group>"; };
+		93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSportField.swift; sourceTree = "<group>"; };
+		93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellSportField.xib; sourceTree = "<group>"; };
+		93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPlayground.swift; sourceTree = "<group>"; };
+		93387DE51BDC064C009B7963 /* TableViewCellPlayground.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPlayground.xib; sourceTree = "<group>"; };
+		93387DE81BDC084B009B7963 /* TableViewCellRink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellRink.swift; sourceTree = "<group>"; };
+		93387DE91BDC084B009B7963 /* TableViewCellRink.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellRink.xib; sourceTree = "<group>"; };
+		93387DEC1BDC11ED009B7963 /* TableViewCellWorship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellWorship.swift; sourceTree = "<group>"; };
+		93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellWorship.xib; sourceTree = "<group>"; };
+		93387DF01BDC132C009B7963 /* TableViewCellArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellArt.swift; sourceTree = "<group>"; };
+		93387DF11BDC132C009B7963 /* TableViewCellArt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellArt.xib; sourceTree = "<group>"; };
 		DC169EC31BDBCA5300742B9A /* NearbEYE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbEYE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC169EC61BDBCA5300742B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC169EC81BDBCA5300742B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +138,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93387DDB1BDBFC24009B7963 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */,
+				93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */,
+				93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */,
+				93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */,
+				93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */,
+				93387DE51BDC064C009B7963 /* TableViewCellPlayground.xib */,
+				93387DE81BDC084B009B7963 /* TableViewCellRink.swift */,
+				93387DE91BDC084B009B7963 /* TableViewCellRink.xib */,
+				93387DEC1BDC11ED009B7963 /* TableViewCellWorship.swift */,
+				93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */,
+				93387DF01BDC132C009B7963 /* TableViewCellArt.swift */,
+				93387DF11BDC132C009B7963 /* TableViewCellArt.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		DC169EBA1BDBCA5300742B9A = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +177,7 @@
 		DC169EC51BDBCA5300742B9A /* NearbEYE */ = {
 			isa = PBXGroup;
 			children = (
+				93387DDB1BDBFC24009B7963 /* TableViewCells */,
 				DC169EC61BDBCA5300742B9A /* AppDelegate.swift */,
 				DC169EC81BDBCA5300742B9A /* ViewController.swift */,
 				DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */,
@@ -232,6 +276,7 @@
 				TargetAttributes = {
 					DC169EC21BDBCA5300742B9A = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = XFM26W33X8;
 					};
 				};
 			};
@@ -261,9 +306,15 @@
 				DC169EE31BDBCD1800742B9A /* OutdoorRinks.json in Resources */,
 				DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */,
 				DC169ED11BDBCA5300742B9A /* Assets.xcassets in Resources */,
+				93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */,
+				93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */,
 				DC169EE71BDBCD1800742B9A /* PointsOfInterest.json in Resources */,
 				DC169EE91BDBCD1800742B9A /* SportsFieldsDiamonds.json in Resources */,
+				93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */,
+				93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */,
+				93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */,
 				DC169EE61BDBCD1800742B9A /* Playgrounds.json in Resources */,
+				93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */,
 				DC169EE81BDBCD1800742B9A /* PublicArt.json in Resources */,
 				DC169EEA1BDBCD1800742B9A /* UrbanDesignAwards.json in Resources */,
 				DC169EE51BDBCD1800742B9A /* PlacesOfWorship.json in Resources */,
@@ -280,9 +331,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */,
+				93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */,
 				DC169F1E1BDBDF4C00742B9A /* ParsePOIsOP.swift in Sources */,
 				DC169F1A1BDBDBFD00742B9A /* ParseWorshipPlacesOp.swift in Sources */,
 				DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */,
+				93387DE61BDC064C009B7963 /* TableViewCellPlayground.swift in Sources */,
 				DC169F1C1BDBDD2800742B9A /* ParsePlayGroundsOp.swift in Sources */,
 				DC169ECF1BDBCA5300742B9A /* NearbEYE.xcdatamodeld in Sources */,
 				DC169F0B1BDBD6BC00742B9A /* PlacesOfWorship.swift in Sources */,
@@ -290,6 +343,8 @@
 				DC169F141BDBD6BC00742B9A /* Playgrounds+CoreDataProperties.swift in Sources */,
 				DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */,
 				DC169EEE1BDBD45E00742B9A /* Operation.swift in Sources */,
+				93387DEA1BDC084B009B7963 /* TableViewCellRink.swift in Sources */,
+				93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */,
 				DC169F121BDBD6BC00742B9A /* Art+CoreDataProperties.swift in Sources */,
 				DC169F061BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift in Sources */,
 				DC169F0F1BDBD6BC00742B9A /* Park.swift in Sources */,
@@ -298,10 +353,12 @@
 				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
 				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
+				93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */,
 				DC169F181BDBD82A00742B9A /* ParseParksOp.swift in Sources */,
 				DC169F0D1BDBD6BC00742B9A /* Rink.swift in Sources */,
 				DC169F0C1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift in Sources */,
 				DC169F201BDBDFE500742B9A /* ParsePublicArtOp.swift in Sources */,
+				93387DEE1BDC11ED009B7963 /* TableViewCellWorship.swift in Sources */,
 				DC169F221BDBE1F400742B9A /* ParseSportFieldsOp.swift in Sources */,
 				DC169F091BDBD6BC00742B9A /* SportField.swift in Sources */,
 				DC169F071BDBD6BC00742B9A /* PointOfInterest.swift in Sources */,
@@ -423,10 +480,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NearbEYE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stephen-Melinyshyn.NearbEYE";
+				PRODUCT_BUNDLE_IDENTIFIER = NearbEYE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -434,10 +494,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NearbEYE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Stephen-Melinyshyn.NearbEYE";
+				PRODUCT_BUNDLE_IDENTIFIER = NearbEYE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -460,6 +523,7 @@
 				DC169EDA1BDBCA5300742B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

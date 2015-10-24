@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		guard let vc = window?.rootViewController as? ViewController else {
 			fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
 		}
-		vc.context = self.managedObjectContext
+		//vc.context = self.managedObjectContext
 		
 //		
 //		let loadRinks = LoadJSONOperation(fileName: "OutdoorRinks")
