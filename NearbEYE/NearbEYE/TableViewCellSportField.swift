@@ -24,9 +24,9 @@ class TableViewCellSportField: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(cell : TableViewCellSportField, data : SportField) {
-        sportWashroomsLabel.text = (data.hasWashrooms?.boolValue == true) ? "Has washrooms" : "Doesn't have washrooms"
-        sportParkingLabel.text = (data.hasParking?.boolValue == true) ? "Has parking" : "Doesn't have parking"
+    static func configureCell(cell : TableViewCellSportField, data : SportField) {
+        cell.sportWashroomsLabel.text = (data.hasWashrooms?.boolValue == true) ? "Has washrooms" : "Doesn't have washrooms"
+        cell.sportParkingLabel.text = (data.hasParking?.boolValue == true) ? "Has parking" : "Doesn't have parking"
     }
     
 }

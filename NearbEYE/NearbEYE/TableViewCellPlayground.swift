@@ -23,7 +23,7 @@ class TableViewCellPlayground: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(cell : TableViewCellPlayground, data : Playground) {
-        playgroundNameLabel.text = (data.name)
+    static func configureCell(cell : TableViewCellPlayground, data : Playground) {
+        cell.playgroundNameLabel.text = (data.name)
     }
 }

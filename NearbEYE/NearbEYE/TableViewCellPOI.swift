@@ -23,10 +23,10 @@ class TableViewCellPOI: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureCell(cell : TableViewCellPOI, data : PointOfInterest) {
-        poiNameLabel.text = (data.name)
-        poiOwnerLabel.text = (data.owner)
-        poiTypeLabel.text = (data.type)
+    static func configureCell(cell : TableViewCellPOI, data : PointOfInterest) {
+        cell.poiNameLabel.text = (data.name)
+        cell.poiOwnerLabel.text = (data.owner)
+        cell.poiTypeLabel.text = (data.type)
     }
     
 }
