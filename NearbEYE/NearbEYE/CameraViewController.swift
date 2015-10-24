@@ -32,7 +32,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	var attractionsNearby = [AnyObject]()
     
     required init?(coder aDecoder: NSCoder) {
-        attractions = [AnyObject]()
         super.init(coder: aDecoder)
     }
     
@@ -142,7 +141,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let reuseId = "art"
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseId)!
-        let obj = attractions[indexPath.row]
+        let obj = attractionsNearby[indexPath.row]
         switch (reuseId) {
         case "art":
             TableViewCellArt.configureCell(cell as! TableViewCellArt, data: obj as! Art)
