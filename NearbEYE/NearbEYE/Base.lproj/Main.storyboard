@@ -72,7 +72,7 @@
                                 </variation>
                             </mapView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-Xv-74E">
-                                <rect key="frame" x="26" y="264" width="554" height="308"/>
+                                <rect key="frame" x="26" y="264" width="554" height="267"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -124,6 +124,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lV-Fj-qWT">
+                                <rect key="frame" x="251" y="550" width="98" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Get Directions"/>
+                                <connections>
+                                    <action selector="getDirections:" destination="E7c-zB-EHJ" eventType="touchUpInside" id="loW-VP-8qR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,7 +152,7 @@
                             <constraint firstItem="7n1-q5-F4G" firstAttribute="centerY" secondItem="JOa-gw-Jek" secondAttribute="centerY" id="P3e-Yi-DeN"/>
                             <constraint firstItem="7n1-q5-F4G" firstAttribute="centerX" secondItem="JOa-gw-Jek" secondAttribute="centerX" id="U2n-tf-m5m"/>
                             <constraint firstItem="YWG-Xv-74E" firstAttribute="top" secondItem="ZvK-wg-TDD" secondAttribute="bottom" constant="35" id="hgm-5z-gh4"/>
-                            <constraint firstItem="dO6-kK-fuo" firstAttribute="top" secondItem="YWG-Xv-74E" secondAttribute="bottom" constant="28" id="ivy-Ug-ixv"/>
+                            <constraint firstItem="dO6-kK-fuo" firstAttribute="top" secondItem="YWG-Xv-74E" secondAttribute="bottom" constant="69" id="ivy-Ug-ixv"/>
                             <constraint firstItem="ZvK-wg-TDD" firstAttribute="top" secondItem="7n1-q5-F4G" secondAttribute="bottom" constant="22" id="o0k-dY-eJJ"/>
                             <constraint firstItem="ZvK-wg-TDD" firstAttribute="top" secondItem="7n1-q5-F4G" secondAttribute="bottom" constant="22" id="pLA-IA-H12"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YWG-Xv-74E" secondAttribute="trailing" id="q4e-NZ-Cd5"/>

@@ -23,10 +23,31 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	var attraction : AnyObject! {
 		didSet {
 			propertiesList = (attraction.performSelector("propertyList").takeRetainedValue() as! [String])
+			let request = MKDirectionsRequest()
+			request.source = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate, addressDictionary: nil))
+			request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
+			request.transportType = MKDirectionsTransportType.Walking
+			let directions = MKDirections(request: request)
+			directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
+				if let error = error {
+					print("There was an error calculating the route \(error)")
+					return
+				}
+				if let resp = response {
+					self.directions = resp
+					if let route = resp.routes.first {
+						self.mapView.addOverlay(route.polyline)
+						self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+					}
+				}
+			}
+			
 		}
 	}
 	
-	var propertiesList = [String]()  
+	var propertiesList = [String]()
+ 
+	var directions : MKDirectionsResponse!
 	
 
 	@IBOutlet weak var mapView: MKMapView!
@@ -41,9 +62,11 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	
 		
 		titleLabel.text = String(attraction.dynamicType)
+
 		
 		mapView.showsUserLocation = true
 		mapView.showsCompass = true
+		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
 		
 		tableView.estimatedRowHeight = 44.0
 		tableView.rowHeight = UITableViewAutomaticDimension
@@ -62,6 +85,14 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	@IBAction func getDirections(sender: AnyObject) {
+		if let d = directions {
+			let place = d.destination.placemark
+			MKMapItem(placemark: place).openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
+		}
+	}
+	
 	
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
@@ -83,6 +114,8 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return propertiesList.count
 	}
+	
+	
 
     /*
     // MARK: - Navigation
