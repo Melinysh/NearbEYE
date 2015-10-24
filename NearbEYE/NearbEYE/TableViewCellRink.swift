@@ -24,8 +24,8 @@ class TableViewCellRink: UITableViewCell {
         // Configure the view for the selected state
     }
     //Saving description for expanded table cell as 20+ words 
-    func configureCell(cell : TableViewCellRink, data : Rink) {
-        rinkNameLabel.text = (data.name)
-        rinkScheduleLabel.text = "Rink schedule: " + String(data.schedule_url)
+    static func configureCell(cell : TableViewCellRink, data : Rink) {
+        cell.rinkNameLabel.text = (data.name)
+        cell.rinkScheduleLabel.text = "Rink schedule: " + String(data.schedule_url)
     }
 }

@@ -25,11 +25,11 @@ class TableViewCellArt: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureCell(cell : TableViewCellArt, data : Art) {
-        artNameLabel.text = (data.name)
-        artArtistLabel.text = (data.artist)
-        artURLLabel.text = "URL" + String(data.url)
-        artYearLabel.text = "Year installed : " + String(data.yearInstalled)
+    static func configureCell(cell : TableViewCellArt, data : Art) {
+        cell.artNameLabel.text = (data.name)
+        cell.artArtistLabel.text = (data.artist)
+        cell.artURLLabel.text = "URL" + String(data.url)
+        cell.artYearLabel.text = "Year installed : " + String(data.yearInstalled)
     }
     
 }

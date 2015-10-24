@@ -32,6 +32,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	var attractionsNearby = [AnyObject]()
     
     required init?(coder aDecoder: NSCoder) {
+        attractions = [AnyObject]()
         super.init(coder: aDecoder)
     }
     
@@ -139,20 +140,38 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //TODO implement stephen's methods
-        if let cell = tableView.dequeueReusableCellWithIdentifier("attraction") {
-			let attraction = attractionsNearby[indexPath.row]
-			if let n = attraction.valueForKey("name") as? String {
-				cell.textLabel?.text = n
-			} else {
-				cell.textLabel?.text =  wordify(NSStringFromClass(attraction.dynamicType))
-			}
-			//	cell.detailTextLabel?.text = "Prototype Content"
-
-            cell.backgroundColor = UIColor.clearColor()
-            return cell
+        let reuseId = "art"
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseId)!
+        let obj = attractions[indexPath.row]
+        switch (reuseId) {
+        case "art":
+            TableViewCellArt.configureCell(cell as! TableViewCellArt, data: obj as! Art)
+            break
+        case "parks":
+            TableViewCellParks.configureCell(cell as! TableViewCellParks, data: obj as! Park)
+            break
+        case "playground":
+            TableViewCellPlayground.configureCell(cell as! TableViewCellPlayground, data: obj as! Playground)
+            break
+        case "poi":
+            TableViewCellPOI.configureCell(cell as! TableViewCellPOI, data: obj as! PointOfInterest)
+            break
+        case "rink":
+            TableViewCellRink.configureCell(cell as! TableViewCellRink, data: obj as! Rink)
+            break
+        case "sportfield":
+            TableViewCellSportField.configureCell(cell as! TableViewCellSportField, data: obj as! SportField)
+            break
+        case "urbandesign":
+            TableViewCellUrbanDesign.configureCell(cell as! TableViewCellUrbanDesign, data: obj as! UrbanDesignAward)
+            break
+        case "worship":
+            TableViewCellWorship.configureCell(cell as! TableViewCellWorship, data: obj as! PlaceOfWorship)
+            break
+        default:
+            print("Invalid reuseID")
+            break
         }
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "attraction")
         return cell
     }
     

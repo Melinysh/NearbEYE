@@ -30,8 +30,18 @@ class CameraOverlayView: UIView {
         attractionsList = UITableView(frame: CGRectMake(20, self.frame.height / 2 - 60, self.frame.width - 40, self.frame.height / 2 + 60), style: UITableViewStyle.Plain)
         attractionsList.delegate = vc
         attractionsList.dataSource = vc
-        attractionsList.registerClass(UITableViewCell.self, forCellReuseIdentifier: "attraction")
+        
+        attractionsList.registerClass(TableViewCellArt.self, forCellReuseIdentifier: "art")
+        attractionsList.registerClass(TableViewCellParks.self, forCellReuseIdentifier: "parks")
+        attractionsList.registerClass(TableViewCellPlayground.self, forCellReuseIdentifier: "playground")
+        attractionsList.registerClass(TableViewCellPOI.self, forCellReuseIdentifier: "poi")
+        attractionsList.registerClass(TableViewCellRink.self, forCellReuseIdentifier: "rink")
+        attractionsList.registerClass(TableViewCellSportField.self, forCellReuseIdentifier: "sportfield")
+        attractionsList.registerClass(TableViewCellUrbanDesign.self, forCellReuseIdentifier: "urbandesign")
+        attractionsList.registerClass(TableViewCellWorship.self, forCellReuseIdentifier: "worship")
+
         attractionsList.backgroundColor = UIColor.clearColor()
+        attractionsList.userInteractionEnabled = false
         self.addSubview(attractionsList)
     }
     
@@ -41,12 +51,14 @@ class CameraOverlayView: UIView {
             UIView.animateWithDuration(NSTimeInterval(200.0/1000.0), animations: { () -> Void in
                 self.frame.origin.y -= self.frame.height / 2 - 60
             })
+            attractionsList.userInteractionEnabled = true
         }
         else {
             recog.direction = UISwipeGestureRecognizerDirection.Up
             UIView.animateWithDuration(NSTimeInterval(200.0/1000.0), animations: { () -> Void in
                 self.frame.origin.y += self.frame.height / 2 - 60
             })
+            attractionsList.userInteractionEnabled = false
         }
     }
 

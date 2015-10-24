@@ -23,8 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		guard let vc = window?.rootViewController as? CameraViewController else {
 			fatalError("ViewController is not root in UIWindow. Talk to Stephen.")
 		}
+<<<<<<< HEAD
 		vc.context = self.managedObjectContext
 		
+=======
+		
+        vc.context = self.managedObjectContext
+>>>>>>> 5569c4f4de35e1069d45e49004c7aabbda8634d3
 		
 //		let loadRinks = LoadJSONOperation(fileName: "OutdoorRinks")
 //		let loadParks = LoadJSONOperation(fileName: "ParksSpaces")

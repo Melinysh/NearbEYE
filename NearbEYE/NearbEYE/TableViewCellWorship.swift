@@ -23,9 +23,9 @@ class TableViewCellWorship: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configureCell(cell : TableViewCellWorship, data : PlaceOfWorship) {
-        worshipNameLabel.text = (data.name)
-        worshipAddressLabel.text = (data.address) 
+    static func configureCell(cell : TableViewCellWorship, data : PlaceOfWorship) {
+        cell.worshipNameLabel.text = (data.name)
+        cell.worshipAddressLabel.text = (data.address)
     }
     
     

@@ -26,10 +26,10 @@ class TableViewCellUrbanDesign: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(cell : TableViewCellUrbanDesign, data : UrbanDesignAward) {
-        urbandesignNameLabel.text = (data.projectName)
-        urbandesignAwardLabel.text = (data.awardName)
-        urbandesignAddressLabel.text = (data.address)
+    static func configureCell(cell : TableViewCellUrbanDesign, data : UrbanDesignAward) {
+        cell.urbandesignNameLabel.text = (data.projectName)
+        cell.urbandesignAwardLabel.text = (data.awardName)
+        cell.urbandesignAddressLabel.text = (data.address)
     }
     
 }
