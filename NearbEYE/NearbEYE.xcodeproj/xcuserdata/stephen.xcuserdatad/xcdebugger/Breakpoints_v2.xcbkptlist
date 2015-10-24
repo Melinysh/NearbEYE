@@ -320,7 +320,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
@@ -448,7 +448,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
@@ -506,6 +506,86 @@
             startingLineNumber = "233"
             endingLineNumber = "233"
             landmarkName = "refreshAttractions()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearbEYE/CameraViewController.swift"
+            timestampString = "467421383.73182"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearbEYE/CameraOverlayView.swift"
+            timestampString = "467421697.434508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "hideOrShowTableView(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NearbEYE.CameraOverlayView.hideOrShowTableView (NearbEYE.CameraOverlayView)(__ObjC.UISwipeGestureRecognizer) -&gt; ()"
+                  moduleName = "NearbEYE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stephen/Desktop/NearbEYE/NearbEYE/NearbEYE/CameraOverlayView.swift"
+                  timestampString = "467421697.451679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NearbEYE.CameraOverlayView.(hideOrShowTableView (NearbEYE.CameraOverlayView) -&gt; (__ObjC.UISwipeGestureRecognizer) -&gt; ()).(closure #1)"
+                  moduleName = "NearbEYE"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stephen/Desktop/NearbEYE/NearbEYE/NearbEYE/CameraOverlayView.swift"
+                  timestampString = "467421697.452061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearbEYE/CameraOverlayView.swift"
+            timestampString = "467421698.753296"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "hideOrShowTableView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

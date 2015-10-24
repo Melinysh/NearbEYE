@@ -27,6 +27,6 @@ class TableViewCellParks: UITableViewCell {
     static func configureCell(cell : TableViewCellParks, data : Park) {
         cell.parkNameLabel.text = (data.name)
         cell.parkAddressLabel.text = (data.address)
-        cell.parkWashroomLabel.text = "Number of washrooms : " + String(data.washrooms)
+		cell.parkWashroomLabel.text = "Number of washrooms : " + (data.washrooms != nil ? String(data.washrooms!) : "0")
     }
 }

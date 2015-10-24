@@ -87,7 +87,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         stopHeadingAndLocation()
     }
     
-    //#MARK: locationManager
+    //MARK: - Location Manager Methods
     
     func startHeadingAndLocation() {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
@@ -135,39 +135,39 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    //#MARK: tableView
+    //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let reuseId = "art"
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseId)!
         let obj = attractionsNearby[indexPath.row]
+        let reuseId = String(obj.dynamicType)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: indexPath)
         switch (reuseId) {
-        case "art":
+        case NSStringFromClass(Art.self):
             TableViewCellArt.configureCell(cell as! TableViewCellArt, data: obj as! Art)
             break
-        case "parks":
+        case NSStringFromClass(Park.self):
             TableViewCellParks.configureCell(cell as! TableViewCellParks, data: obj as! Park)
             break
-        case "playground":
+        case NSStringFromClass(Playground.self):
             TableViewCellPlayground.configureCell(cell as! TableViewCellPlayground, data: obj as! Playground)
             break
-        case "poi":
+        case NSStringFromClass(PointOfInterest.self):
             TableViewCellPOI.configureCell(cell as! TableViewCellPOI, data: obj as! PointOfInterest)
             break
-        case "rink":
+        case NSStringFromClass(Rink.self):
             TableViewCellRink.configureCell(cell as! TableViewCellRink, data: obj as! Rink)
             break
-        case "sportfield":
+        case NSStringFromClass(SportField.self):
             TableViewCellSportField.configureCell(cell as! TableViewCellSportField, data: obj as! SportField)
             break
-        case "urbandesign":
+        case NSStringFromClass(UrbanDesignAward.self):
             TableViewCellUrbanDesign.configureCell(cell as! TableViewCellUrbanDesign, data: obj as! UrbanDesignAward)
             break
-        case "worship":
+        case NSStringFromClass(PlaceOfWorship.self):
             TableViewCellWorship.configureCell(cell as! TableViewCellWorship, data: obj as! PlaceOfWorship)
             break
         default:
@@ -219,7 +219,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	// MARK: - Attraction Finding Methods
 	func refreshAttractions() {
-		if lastLocation == nil || lastHeading == nil { return }
+        if (lastHeading == nil || lastLocation == nil) {
+            return
+        }
 		let dir = directionForHeading(lastHeading)
 		let latOffset = latitudeOffset(lastLocation.coordinate, dir: dir)
 		let longOffset = longitudeOffset(lastLocation.coordinate, dir: dir)

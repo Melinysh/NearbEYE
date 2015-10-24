@@ -31,14 +31,14 @@ class CameraOverlayView: UIView {
         attractionsList.delegate = vc
         attractionsList.dataSource = vc
         
-        attractionsList.registerClass(TableViewCellArt.self, forCellReuseIdentifier: "art")
-        attractionsList.registerClass(TableViewCellParks.self, forCellReuseIdentifier: "parks")
-        attractionsList.registerClass(TableViewCellPlayground.self, forCellReuseIdentifier: "playground")
-        attractionsList.registerClass(TableViewCellPOI.self, forCellReuseIdentifier: "poi")
-        attractionsList.registerClass(TableViewCellRink.self, forCellReuseIdentifier: "rink")
-        attractionsList.registerClass(TableViewCellSportField.self, forCellReuseIdentifier: "sportfield")
-        attractionsList.registerClass(TableViewCellUrbanDesign.self, forCellReuseIdentifier: "urbandesign")
-        attractionsList.registerClass(TableViewCellWorship.self, forCellReuseIdentifier: "worship")
+        attractionsList.registerNib(UINib(nibName: "TableViewCellArt", bundle: nil), forCellReuseIdentifier: NSStringFromClass(Art.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellParks", bundle: nil), forCellReuseIdentifier: NSStringFromClass(Park.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellPlayground", bundle: nil), forCellReuseIdentifier: NSStringFromClass(Playground.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellPOI", bundle: nil), forCellReuseIdentifier: NSStringFromClass(PointOfInterest.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellRink", bundle: nil), forCellReuseIdentifier: NSStringFromClass(Rink.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellSportField", bundle: nil), forCellReuseIdentifier: NSStringFromClass(SportField.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellUrbanDesign", bundle: nil), forCellReuseIdentifier: NSStringFromClass(UrbanDesignAward.self))
+        attractionsList.registerNib(UINib(nibName: "TableViewCellWorship", bundle: nil), forCellReuseIdentifier: NSStringFromClass(PlaceOfWorship.self))
 
         attractionsList.backgroundColor = UIColor.clearColor()
         attractionsList.userInteractionEnabled = false
