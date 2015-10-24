@@ -44,6 +44,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
             locationManager.requestWhenInUseAuthorization()
         }
+        else {
+            startHeadingAndLocation()
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -171,6 +174,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             print("Invalid reuseID")
             break
         }
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     

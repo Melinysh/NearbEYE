@@ -11,13 +11,16 @@ import UIKit
 class CameraOverlayView: UIView {
 
     var attractionsList : UITableView!
+    var swipeRecog : UISwipeGestureRecognizer!
     
     init(frame: CGRect, vc: CameraViewController) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
         configureTableView(vc)
-        let swipeRecog = UISwipeGestureRecognizer(target: self, action: "hideOrShowTableView:")
+        swipeRecog = UISwipeGestureRecognizer(target: self, action: "hideOrShowTableViewFromSwipe:")
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Up
+        let tapRecog = UITapGestureRecognizer(target: self, action: "hideOrShowTableViewFromTap:")
+        self.addGestureRecognizer(tapRecog)
         self.addGestureRecognizer(swipeRecog)
         self.addSubview(UIButton(frame: CGRectMake(30,30,60,60)))
     }
@@ -45,23 +48,42 @@ class CameraOverlayView: UIView {
         self.addSubview(attractionsList)
     }
     
-    func hideOrShowTableView(recog: UISwipeGestureRecognizer) {
+    func hideOrShowTableViewFromSwipe(recog: UISwipeGestureRecognizer) {
         if (recog.direction == UISwipeGestureRecognizerDirection.Up) {
-            recog.direction = UISwipeGestureRecognizerDirection.Down
+            hideOrShowTableView(true)
+        }
+        else {
+            hideOrShowTableView(false)
+        }
+    }
+    
+    func hideOrShowTableViewFromTap(recog: UITapGestureRecognizer) {
+        if (attractionsList.userInteractionEnabled == true) {
+            hideOrShowTableView(false)
+        }
+        else {
+            hideOrShowTableView(true)
+        }
+    }
+
+    func hideOrShowTableView(show: Bool) {
+        if (show) {
             UIView.animateWithDuration(NSTimeInterval(200.0/1000.0), animations: { () -> Void in
                 self.frame.origin.y -= self.frame.height / 2 - 60
             })
             attractionsList.userInteractionEnabled = true
+            swipeRecog.direction = UISwipeGestureRecognizerDirection.Down
         }
         else {
-            recog.direction = UISwipeGestureRecognizerDirection.Up
             UIView.animateWithDuration(NSTimeInterval(200.0/1000.0), animations: { () -> Void in
                 self.frame.origin.y += self.frame.height / 2 - 60
             })
             attractionsList.userInteractionEnabled = false
+            swipeRecog.direction = UISwipeGestureRecognizerDirection.Up
         }
-    }
 
+    }
+    
     
     /*
     // Only override drawRect: if you perform custom drawing.
