@@ -43,7 +43,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let status = CLLocationManager.authorizationStatus()
         if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
             locationManager.requestWhenInUseAuthorization()
-        }
+		} else {
+			startHeadingAndLocation()
+		}
+		
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -216,6 +219,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	// MARK: - Attraction Finding Methods
 	func refreshAttractions() {
+		if lastLocation == nil || lastHeading == nil { return }
 		let dir = directionForHeading(lastHeading)
 		let latOffset = latitudeOffset(lastLocation.coordinate, dir: dir)
 		let longOffset = longitudeOffset(lastLocation.coordinate, dir: dir)
@@ -224,8 +228,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		let minLat = lastLocation.coordinate.latitude + latOffset.1
 		let maxLong = lastLocation.coordinate.longitude + longOffset.0
 		let minLong = lastLocation.coordinate.longitude + longOffset.1
-		print("Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
-		
+		print("\(dir)  Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
 		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
 		cameraOverlay.attractionsList.reloadData()
 	}
