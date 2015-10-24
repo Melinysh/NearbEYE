@@ -43,8 +43,6 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="rinkNameLabel" destination="qsI-n0-36S" id="8k1-iC-6I8"/>
-                <outlet property="rinkScheduleLabel" destination="I1Q-lB-4P1" id="cwa-9A-FBK"/>
                 <outlet property="worshipAddressLabel" destination="I1Q-lB-4P1" id="5bZ-7F-Wgj"/>
                 <outlet property="worshipNameLabel" destination="qsI-n0-36S" id="nYC-F0-dJ7"/>
             </connections>
