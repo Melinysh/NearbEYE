@@ -22,4 +22,8 @@ extension UrbanDesignAward {
     @NSManaged var projectDescription: String?
     @NSManaged var juryComments: String?
 
+	
+	func propertyList() -> [String] {
+		return ["address", "awardName", "projectName", "projectDescription", "juryComments"]
+	}
 }

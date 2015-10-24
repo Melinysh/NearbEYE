@@ -21,5 +21,9 @@ extension SportField {
     @NSManaged var hasWashrooms: NSNumber?
     @NSManaged var hasPlayground: NSNumber?
     @NSManaged var area: NSNumber?
+	
+	func propertyList() -> [String] {
+		return ["hasLights", "hasParking", "hasWashrooms", "hasPlayground", "area"]
+	}
 
 }

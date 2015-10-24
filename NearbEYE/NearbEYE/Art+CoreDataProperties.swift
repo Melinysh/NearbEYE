@@ -21,4 +21,8 @@ extension Art {
     @NSManaged var yearInstalled: NSNumber?
     @NSManaged var url: String?
 
+	func propertyList() -> [String] {
+		return ["name", "artist", "yearInstalled", "url"]
+	}
+	
 }

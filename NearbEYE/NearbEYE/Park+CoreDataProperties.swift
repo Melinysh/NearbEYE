@@ -32,5 +32,9 @@ extension Park {
     @NSManaged var area: NSNumber?
     @NSManaged var longitude: NSNumber?
     @NSManaged var latitude: NSNumber?
+	
+	func propertyList() -> [String] {
+		return ["name", "address", "playgrounds", "bridges", "benches", "hasTrashcans", "bikeracks", "tenniscourts", "diamonds", "fields", "basketball", "cricket", "hasRink", "toboggans", "washrooms", "area"]
+	}
 
 }
