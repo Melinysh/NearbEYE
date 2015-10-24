@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCellSportField: UITableViewCell {
 
+    
     @IBOutlet weak var sportParkingLabel: UILabel!
     @IBOutlet weak var sportWashroomsLabel: UILabel!
     
