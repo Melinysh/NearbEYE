@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraOverlayView: UIView {
+class CameraOverlayView: UIView, UIGestureRecognizerDelegate {
 
     var attractionsList : UITableView!
     var swipeRecog : UISwipeGestureRecognizer!
@@ -19,8 +19,10 @@ class CameraOverlayView: UIView {
         configureTableView(vc)
         swipeRecog = UISwipeGestureRecognizer(target: self, action: "hideOrShowTableViewFromSwipe:")
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Up
+        swipeRecog.delegate = self
         let tapRecog = UITapGestureRecognizer(target: self, action: "hideOrShowTableViewFromTap:")
-   //     self.addGestureRecognizer(tapRecog)
+        tapRecog.delegate = self
+        self.addGestureRecognizer(tapRecog)
         self.addGestureRecognizer(swipeRecog)
         self.addSubview(UIButton(frame: CGRectMake(30,30,60,60)))
     }
@@ -85,6 +87,14 @@ class CameraOverlayView: UIView {
 
     }
     
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if (attractionsList.frame.contains(touch.locationInView(self))) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     
     /*
     // Only override drawRect: if you perform custom drawing.

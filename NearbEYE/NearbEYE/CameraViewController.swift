@@ -40,13 +40,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		coreDataComm = CoreDataCommunicator(c: self.context)
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        let status = CLLocationManager.authorizationStatus()
-        if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
-            locationManager.requestWhenInUseAuthorization()
-		} else {
-			startHeadingAndLocation()
-		}
-		
+     //   let status = CLLocationManager.authorizationStatus()
+        locationManager.requestWhenInUseAuthorization()
+        startHeadingAndLocation()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -71,11 +67,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
 		// Do any additional setup after loading the view, typically from a nib.
 	}
-    
-    override func viewWillDisappear(animated: Bool) {
-        locationManager.stopUpdatingHeading()
-        locationManager.stopUpdatingLocation()
-    }
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -91,10 +82,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func startHeadingAndLocation() {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
-            lastHeading = locationManager.heading
-            lastLocation = locationManager.location
             locationManager.startUpdatingHeading()
             locationManager.startUpdatingLocation()
+            print("Starting updates")
         }
     }
     
@@ -107,9 +97,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print(status.rawValue)
-        if (status == CLAuthorizationStatus.AuthorizedWhenInUse) {
-            startHeadingAndLocation()
-        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
@@ -126,11 +113,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         if (lastLocation == nil) {
             lastLocation = newLocation
-            
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
-			
 			refreshAttractions()
             print(lastLocation)
         }
