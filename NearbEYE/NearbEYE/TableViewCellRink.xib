@@ -19,26 +19,26 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Rink Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaj-lG-JGu">
-                        <rect key="frame" x="96" y="8" width="260" height="24"/>
+                        <rect key="frame" x="82" y="23" width="260" height="27"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="iaj-lG-JGu" firstAttribute="leading" secondItem="wUm-v2-kdg" secondAttribute="leadingMargin" constant="88" id="5ZP-dH-ezq"/>
+                    <constraint firstItem="iaj-lG-JGu" firstAttribute="leading" secondItem="wUm-v2-kdg" secondAttribute="leadingMargin" constant="74" id="5ZP-dH-ezq"/>
                     <constraint firstItem="BPY-MC-1EB" firstAttribute="bottom" secondItem="wUm-v2-kdg" secondAttribute="bottomMargin" id="GMK-EK-2s1"/>
                     <constraint firstAttribute="trailingMargin" secondItem="BPY-MC-1EB" secondAttribute="trailing" constant="55" id="gCc-r1-pnz"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="iaj-lG-JGu" secondAttribute="trailing" constant="14" id="ksS-oJ-Pfi"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iaj-lG-JGu" secondAttribute="trailing" constant="28" id="ksS-oJ-Pfi"/>
                     <constraint firstItem="BPY-MC-1EB" firstAttribute="leading" secondItem="wUm-v2-kdg" secondAttribute="leadingMargin" id="n1z-do-5c2"/>
-                    <constraint firstItem="iaj-lG-JGu" firstAttribute="top" secondItem="wUm-v2-kdg" secondAttribute="topMargin" id="o3u-6U-mFf"/>
+                    <constraint firstItem="iaj-lG-JGu" firstAttribute="top" secondItem="wUm-v2-kdg" secondAttribute="topMargin" constant="15" id="o3u-6U-mFf"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>

@@ -14,28 +14,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Insert POI Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-Ve-QuR">
-                        <rect key="frame" x="14" y="13" width="142" height="23"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert POI Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l66-sk-inh">
-                        <rect key="frame" x="125" y="630" width="185" height="21"/>
+                        <rect key="frame" x="125" y="631" width="185" height="21"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Insert POI Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-69-M2Z">
-                        <rect key="frame" x="227" y="13" width="143" height="23"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert POI Owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-69-M2Z">
+                        <rect key="frame" x="214" y="22" width="156" height="27"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert POI Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-Ve-QuR">
+                        <rect key="frame" x="14" y="22" width="154" height="27"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -43,11 +43,11 @@
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="l66-sk-inh" secondAttribute="trailing" constant="60" id="2Or-XI-Jfe"/>
                     <constraint firstItem="l66-sk-inh" firstAttribute="leading" secondItem="xjW-Gl-6Np" secondAttribute="leadingMargin" constant="117" id="Sqq-OI-nVx"/>
-                    <constraint firstItem="WD3-69-M2Z" firstAttribute="top" secondItem="xjW-Gl-6Np" secondAttribute="topMargin" constant="5" id="hEg-tc-dKL"/>
+                    <constraint firstItem="WD3-69-M2Z" firstAttribute="top" secondItem="xjW-Gl-6Np" secondAttribute="topMargin" constant="14" id="hEg-tc-dKL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="WD3-69-M2Z" secondAttribute="trailing" id="iFI-b8-Wba"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="l66-sk-inh" secondAttribute="bottom" constant="7" id="l4l-zR-8h7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="l66-sk-inh" secondAttribute="bottom" constant="6" id="l4l-zR-8h7"/>
                     <constraint firstItem="Ygj-Ve-QuR" firstAttribute="leading" secondItem="xjW-Gl-6Np" secondAttribute="leadingMargin" constant="6" id="sHP-bk-ztq"/>
-                    <constraint firstItem="Ygj-Ve-QuR" firstAttribute="top" secondItem="xjW-Gl-6Np" secondAttribute="topMargin" constant="5" id="uPG-Sa-Atu"/>
+                    <constraint firstItem="Ygj-Ve-QuR" firstAttribute="top" secondItem="xjW-Gl-6Np" secondAttribute="topMargin" constant="14" id="uPG-Sa-Atu"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
