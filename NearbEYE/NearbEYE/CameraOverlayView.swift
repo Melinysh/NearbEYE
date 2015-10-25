@@ -20,7 +20,7 @@ class CameraOverlayView: UIView {
         swipeRecog = UISwipeGestureRecognizer(target: self, action: "hideOrShowTableViewFromSwipe:")
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Up
         let tapRecog = UITapGestureRecognizer(target: self, action: "hideOrShowTableViewFromTap:")
-        self.addGestureRecognizer(tapRecog)
+   //     self.addGestureRecognizer(tapRecog)
         self.addGestureRecognizer(swipeRecog)
         self.addSubview(UIButton(frame: CGRectMake(30,30,60,60)))
     }
@@ -43,6 +43,7 @@ class CameraOverlayView: UIView {
         attractionsList.registerNib(UINib(nibName: "TableViewCellUrbanDesign", bundle: nil), forCellReuseIdentifier: NSStringFromClass(UrbanDesignAward.self))
         attractionsList.registerNib(UINib(nibName: "TableViewCellWorship", bundle: nil), forCellReuseIdentifier: NSStringFromClass(PlaceOfWorship.self))
 
+        attractionsList.scrollEnabled = true
         attractionsList.backgroundColor = UIColor.clearColor()
         attractionsList.userInteractionEnabled = false
         self.addSubview(attractionsList)

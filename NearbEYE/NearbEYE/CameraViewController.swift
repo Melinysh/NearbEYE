@@ -43,10 +43,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let status = CLLocationManager.authorizationStatus()
         if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
             locationManager.requestWhenInUseAuthorization()
-        }
-        else {
-            startHeadingAndLocation()
-        }
+		} else {
+			startHeadingAndLocation()
+		}
+		
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -126,6 +126,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         if (lastLocation == nil) {
             lastLocation = newLocation
+            
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
@@ -183,6 +184,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         presentDetailViewControllerForAttraction(nil)
         //TODO segue to detail vc
 		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+        vc.userLocation = lastLocation.coordinate
 		vc.attraction = attractionsNearby[indexPath.row]
     }
     
