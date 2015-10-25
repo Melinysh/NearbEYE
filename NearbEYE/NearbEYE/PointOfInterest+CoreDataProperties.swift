@@ -12,6 +12,10 @@
 import Foundation
 import CoreData
 
+protocol Stringify {
+	func selfName() -> String
+}
+
 extension PointOfInterest {
 
     @NSManaged var longitude: NSNumber?
@@ -21,8 +25,9 @@ extension PointOfInterest {
     @NSManaged var owner: String?
 
 	
-	func propertList() -> [String] {
+	func propertyList() -> [String] {
 		return ["name","type","owner"]
 	}
+
 	
 }

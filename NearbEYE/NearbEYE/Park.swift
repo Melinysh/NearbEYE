@@ -11,8 +11,11 @@ import CoreData
 
 @objc (Park)
 
-class Park: NSManagedObject {
+class Park: NSManagedObject, Stringify {
 
 // Insert code here to add functionality to your managed object subclass
 
+	func selfName() -> String {
+		return name != nil ? name! : "Park"
+	}
 }

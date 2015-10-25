@@ -31,6 +31,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	let cameraView = UIImagePickerController()
 
 	var attractionsNearby = [AnyObject]()
+	var selectionAttraction : AnyObject!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -56,7 +57,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             cameraView.showsCameraControls = false
             cameraView.cameraViewTransform = CGAffineTransformTranslate(CGAffineTransformMakeScale(4.2/3.0, 4.2/3.0), 0, screenSize.height / 10.0)
             
-            cameraOverlay = CameraOverlayView(frame: CGRectMake(0, 0, screenSize.width, screenSize.height * 2), vc: self)
+            cameraOverlay = CameraOverlayView(frame: self.view.bounds, vc: self)
             cameraView.cameraOverlayView = cameraOverlay
             
             
@@ -75,9 +76,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		// Dispose of any resources that can be recreated.
 	}
     
-    func presentDetailViewControllerForAttraction(attraction: AnyObject?) {
-        //TODO implement this
-        stopHeadingAndLocation()
+    func presentDetailViewControllerForAttractionNumber(attractionNumber: Int) {
+		selectionAttraction = attractionsNearby[attractionNumber]
+		self.performSegueWithIdentifier("toDetail", sender: self)
     }
     
     //MARK: - Location Manager Methods
@@ -104,6 +105,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if (lastHeading == nil) {
             lastHeading = newHeading
+			refreshAttractions()
         }
         else if (fabs(newHeading.magneticHeading - lastHeading.magneticHeading) >= minimumHeadingChangeForRefresh) {
             lastHeading = newHeading
@@ -115,6 +117,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         if (lastLocation == nil) {
             lastLocation = newLocation
+			refreshAttractions()
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
@@ -126,7 +129,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return UIScreen.mainScreen().bounds.height
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -167,31 +170,17 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        presentDetailViewControllerForAttraction(nil)
-        //TODO segue to detail vc
-		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
-        vc.userLocation = lastLocation.coordinate
-		vc.attraction = attractionsNearby[indexPath.row]
-		cameraView.pushViewController(vc, animated: true)
+        //TODO is there no way to disable selection? Fuck it i'll do it later
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return attractionsNearby.count
     }
     
-
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        
-    }
+    /*func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let tableView = scrollView as! UITableView
+        tableView.scrollToRowAtIndexPath(tableView., atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+    }*/
 
 	func wordify(str :String) -> String {
 		var firstword = ""
@@ -268,6 +257,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		// set properties for detail vc here
+		let vc = segue.destinationViewController as! DetailAttractionViewController
+		vc.attraction = selectionAttraction
+		vc.userLocation = self.lastLocation.coordinate		
 	}
 	
 	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
