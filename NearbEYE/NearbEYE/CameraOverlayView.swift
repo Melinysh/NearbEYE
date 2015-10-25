@@ -25,6 +25,10 @@ class CameraOverlayView: UIView, UIGestureRecognizerDelegate {
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Left
         self.addGestureRecognizer(swipeRecog)
         
+        let tapGesture = UITapGestureRecognizer(target: vc, action: "presentNearbyAttractionsViewController")
+        tapGesture.numberOfTapsRequired = 2
+        self.addGestureRecognizer(tapGesture)
+        
         nothingNearbEYELabel = UILabel()
         nothingNearbEYELabel.text = "Nothing NearbEYE"
         nothingNearbEYELabel.font = UIFont(name: "System-Light", size: 18)

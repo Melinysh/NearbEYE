@@ -36,6 +36,19 @@ class CoreDataCommunicator {
 		})
 		return results
 	}
+    
+    func all(userLocation: CLLocationCoordinate2D) -> [AnyObject] {
+        let classNames = ["PointOfInterest", "SportField", "PlaceOfWorship", "Rink", "Park", "UrbanDesignAward", "Art", "Playground"]
+        var results = [AnyObject]()
+        for name in classNames {
+            let fetchReq = fetchRequest(name)
+            results += fetch(fetchReq)
+        }
+        results.sortInPlace { (one, two) -> Bool in
+            return CoreDataCommunicator.dist(one.valueForKey("latitude") as! Double, longitude: one.valueForKey("longitude") as! Double, userLocaltion: userLocation) < CoreDataCommunicator.dist(two.valueForKey("latitude") as! Double, longitude: two.valueForKey("longitude") as! Double, userLocaltion: userLocation)
+        }
+        return results
+    }
 	
 	func attractionsInRadius(maxLat :Double, minLat : Double, maxLong : Double, minLong : Double, userLocation : CLLocationCoordinate2D) -> [AnyObject] {
 		let classNames = ["PointOfInterest", "SportField", "PlaceOfWorship", "Rink", "Park", "UrbanDesignAward", "Art", "Playground"]

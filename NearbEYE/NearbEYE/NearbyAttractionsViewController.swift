@@ -9,20 +9,34 @@
 import UIKit
 import MapKit
 
+class NEAnnotation: NSObject, MKAnnotation {
+    private(set) var coordinate : CLLocationCoordinate2D
+    var title : String?
+    var attraction : AnyObject
+    init(coord: CLLocationCoordinate2D, name: String, att: AnyObject) {
+        title = name
+        coordinate = coord
+        attraction = att
+    }
+}
+
 class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView : MKMapView!
     var nearbyAttractions : [AnyObject]!
     var lastLocation : CLLocationCoordinate2D!
     let minimumDistanceForRefresh = 0.0005
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    let mapSpan : MKCoordinateSpan = MKCoordinateSpanMake(0.05, 0.05)
+    var coreDataComm : CoreDataCommunicator!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
         lastLocation = mapView.userLocation.coordinate
-        mapView.setRegion(MKCoordinateRegion(center: lastLocation, span: MKCoordinateSpanMake(0.03, 0.03)), animated: false)
+        mapView.setRegion(MKCoordinateRegion(center: lastLocation, span: mapSpan), animated: false)
         nearbyAttractions = [AnyObject]()
-        mapView.delegate = self
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +44,24 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     func updateNearbyAttractions() {
-        
+        nearbyAttractions = coreDataComm.all(lastLocation)
+        print("Attras \(nearbyAttractions.count)")
+        nearbyAttractions = Array(nearbyAttractions.prefix(10))
+        for attraction in nearbyAttractions {
+            let long = attraction.valueForKey("longitude") as! NSNumber
+            let lat = attraction.valueForKey("latitude") as! NSNumber
+            let c = CLLocationCoordinate2D(latitude: lat.doubleValue, longitude: long.doubleValue)
+            mapView.addAnnotation(NEAnnotation(coord: c, name: attraction.performSelector("selfName").retain().takeRetainedValue() as! String, att: attraction))
+        }
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
@@ -41,6 +71,19 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if let pinView = mapView.dequeueReusableAnnotationViewWithIdentifier("attraction") {
+            return pinView
+        }
+        return MKPinAnnotationView(annotation: annotation, reuseIdentifier: "attraction")
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+        vc.attraction = (view.annotation as! NEAnnotation).attraction
+        vc.userLocation = mapView.userLocation.coordinate
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
     /*
     // MARK: - Navigation

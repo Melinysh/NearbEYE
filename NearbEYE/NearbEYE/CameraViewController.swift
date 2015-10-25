@@ -88,7 +88,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func presentNearbyAttractionsViewController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("nearbyAttractionsVC") as! NearbyAttractionsViewController
-      //  vc.modalTransitionStyle = UIModalTransitionStyle
+        vc.coreDataComm = coreDataComm
+        cameraView.pushToVC(vc)
     }
     
     //MARK: - Location Manager Methods
