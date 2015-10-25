@@ -22,8 +22,9 @@ class CameraOverlayView: UIView, UIGestureRecognizerDelegate {
         swipeRecog.delegate = self
         let tapRecog = UITapGestureRecognizer(target: self, action: "hideOrShowTableViewFromTap:")
         tapRecog.delegate = self
-        self.addGestureRecognizer(tapRecog)
-        self.addGestureRecognizer(swipeRecog)
+		self.userInteractionEnabled = false
+		self.addGestureRecognizer(tapRecog)
+		self.addGestureRecognizer(swipeRecog)
         self.addSubview(UIButton(frame: CGRectMake(30,30,60,60)))
     }
 

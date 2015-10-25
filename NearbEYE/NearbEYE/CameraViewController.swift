@@ -62,12 +62,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             self.presentViewController(cameraView, animated: true, completion: nil)
         }
-        
+		
+		
         
         
 		// Do any additional setup after loading the view, typically from a nib.
 	}
-
+	
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -257,6 +259,21 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		} else {
 			return .West
 		}
+	}
+	
+	//MARK: - Custom Segues
+	@IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+		
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		// set properties for detail vc here
+	}
+	
+	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
+		return CustomDetailUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+			print("Unwinding from detail vc")
+		})
 	}
 	
 }

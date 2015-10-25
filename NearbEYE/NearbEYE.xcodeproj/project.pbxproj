@@ -23,6 +23,8 @@
 		93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */; };
 		93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DF01BDC132C009B7963 /* TableViewCellArt.swift */; };
 		93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DF11BDC132C009B7963 /* TableViewCellArt.xib */; };
+		DC03E1F51BDD2AE000E0E4F6 /* CustomDetailSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */; };
+		DC03E1F71BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */; };
 		DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC61BDBCA5300742B9A /* AppDelegate.swift */; };
 		DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC81BDBCA5300742B9A /* ViewController.swift */; };
 		DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC169ECA1BDBCA5300742B9A /* Main.storyboard */; };
@@ -95,6 +97,8 @@
 		93387DED1BDC11ED009B7963 /* TableViewCellWorship.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellWorship.xib; sourceTree = "<group>"; };
 		93387DF01BDC132C009B7963 /* TableViewCellArt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellArt.swift; sourceTree = "<group>"; };
 		93387DF11BDC132C009B7963 /* TableViewCellArt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellArt.xib; sourceTree = "<group>"; };
+		DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDetailSegue.swift; sourceTree = "<group>"; };
+		DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDetailUnwindSegue.swift; sourceTree = "<group>"; };
 		DC169EC31BDBCA5300742B9A /* NearbEYE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbEYE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC169EC61BDBCA5300742B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC169EC81BDBCA5300742B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				DC169EC81BDBCA5300742B9A /* ViewController.swift */,
 				DC169F281BDBF5C400742B9A /* CoreDataCommunicator.swift */,
 				DC169ECA1BDBCA5300742B9A /* Main.storyboard */,
+				DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */,
+				DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */,
 				DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */,
 				DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */,
 				DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */,
@@ -309,7 +315,7 @@
 				TargetAttributes = {
 					DC169EC21BDBCA5300742B9A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 87ZFCTHS33;
+						DevelopmentTeam = CQC8JX8Q4Q;
 					};
 				};
 			};
@@ -392,11 +398,13 @@
 				DC169F0E1BDBD6BC00742B9A /* Park+CoreDataProperties.swift in Sources */,
 				DC169F311BDC0C6600742B9A /* DetailTableViewCell.swift in Sources */,
 				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
+				DC03E1F51BDD2AE000E0E4F6 /* CustomDetailSegue.swift in Sources */,
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
 				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
 				930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */,
 				930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */,
 				93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */,
+				DC03E1F71BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift in Sources */,
 				DC169F181BDBD82A00742B9A /* ParseParksOp.swift in Sources */,
 				DC169F0D1BDBD6BC00742B9A /* Rink.swift in Sources */,
 				DC169F0C1BDBD6BC00742B9A /* Rink+CoreDataProperties.swift in Sources */,
