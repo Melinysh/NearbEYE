@@ -20,30 +20,7 @@ extension Bool {
 
 class DetailAttractionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var attraction : AnyObject! {
-		didSet {
-			propertiesList = (attraction.performSelector("propertyList").takeRetainedValue() as! [String])
-			let request = MKDirectionsRequest()
-			request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation, addressDictionary: nil))
-			request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
-			request.transportType = MKDirectionsTransportType.Walking
-			let directions = MKDirections(request: request)
-			directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
-				if let error = error {
-					print("There was an error calculating the route \(error)")
-					return
-				}
-				if let resp = response {
-					self.directions = resp
-					if let route = resp.routes.first {
-						self.mapView.addOverlay(route.polyline)
-						self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-					}
-				}
-			}
-			
-		}
-	}
+	var attraction : AnyObject!
 	
 	var propertiesList = [String]()
  
@@ -58,6 +35,27 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	@IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		propertiesList = (attraction.performSelector("propertyList").takeRetainedValue() as! [String])
+		let request = MKDirectionsRequest()
+		request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation, addressDictionary: nil))
+		request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
+		request.transportType = MKDirectionsTransportType.Walking
+		let directions = MKDirections(request: request)
+		directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
+			if let error = error {
+				print("There was an error calculating the route \(error)")
+				return
+			}
+			if let resp = response {
+				self.directions = resp
+				if let route = resp.routes.first {
+					self.mapView.addOverlay(route.polyline)
+					self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+				}
+			}
+		}
+		
 		tableView.dataSource = self
 		tableView.delegate = self
 	
