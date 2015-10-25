@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,89 +11,44 @@
             <rect key="frame" x="0.0" y="0.0" width="378" height="667"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sCY-t4-Q5k" id="pCy-0N-yLp">
-                <rect key="frame" x="0.0" y="0.0" width="378" height="666"/>
+                <rect key="frame" x="0.0" y="0.0" width="378" height="666.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wuy-eB-7tm">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="70"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QBI-n9-u74">
-                            <rect key="frame" x="0.0" y="0.0" width="378" height="70"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Park Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-sf-qIn">
-                                    <rect key="frame" x="95" y="23" width="189" height="24"/>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                                    <color key="textColor" red="0.0" green="0.99178061989980093" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree" translatesAutoresizingMaskIntoConstraints="NO" id="qcU-8L-ScP">
-                                    <rect key="frame" x="38" y="12" width="35" height="46"/>
-                                    <animations/>
-                                </imageView>
-                            </subviews>
-                            <animations/>
-                        </view>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GzV-Bj-WWD">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="671"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Park Name Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-sf-qIn">
+                        <rect key="frame" x="71" y="10" width="243" height="50"/>
                         <animations/>
-                        <blurEffect style="dark"/>
-                    </visualEffectView>
-                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsY-0e-sdf">
-                        <rect key="frame" x="0.0" y="601" width="378" height="65"/>
-                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="28f-Jv-jrr">
-                            <rect key="frame" x="0.0" y="0.0" width="378" height="65"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Washroom Number Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-ra-Qyo">
-                                    <rect key="frame" x="59" y="36" width="260" height="21"/>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Park Addres Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvB-jU-LRy">
-                                    <rect key="frame" x="85" y="8" width="234" height="21"/>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                    <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <animations/>
-                        </view>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                        <color key="textColor" red="0.66541054995343729" green="0.86937661474833816" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Park Addres Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvB-jU-LRy">
+                        <rect key="frame" x="72" y="628" width="234" height="21"/>
                         <animations/>
-                        <blurEffect style="dark"/>
-                    </visualEffectView>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.66541054995343729" green="0.86937661474833816" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Washroom Number Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIq-ra-Qyo">
+                        <rect key="frame" x="58" y="601" width="260" height="21"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" red="0.66541054995343729" green="0.86937661474833816" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <animations/>
-                <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Wuy-eB-7tm" secondAttribute="trailing" constant="-8" id="18r-e3-zy1"/>
-                    <constraint firstItem="qcU-8L-ScP" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="30" id="3FB-mr-ppe"/>
-                    <constraint firstItem="Wuy-eB-7tm" firstAttribute="top" secondItem="pCy-0N-yLp" secondAttribute="topMargin" constant="-8" id="5p5-9U-EGf"/>
-                    <constraint firstItem="qcU-8L-ScP" firstAttribute="top" secondItem="pCy-0N-yLp" secondAttribute="topMargin" constant="4" id="94B-bO-k0r"/>
-                    <constraint firstItem="Mcy-sf-qIn" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="87" id="9Wr-on-AhF"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="rvB-jU-LRy" secondAttribute="trailing" constant="51" id="CGY-qB-MPM"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wIq-ra-Qyo" secondAttribute="bottom" id="Dgy-LH-Ml2"/>
-                    <constraint firstItem="wsY-0e-sdf" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="-8" id="ETS-RM-E89"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Wuy-eB-7tm" secondAttribute="bottom" constant="588" id="GEx-aE-giF"/>
-                    <constraint firstItem="wsY-0e-sdf" firstAttribute="top" secondItem="pCy-0N-yLp" secondAttribute="topMargin" constant="593" id="GKn-kK-4bf"/>
-                    <constraint firstItem="Mcy-sf-qIn" firstAttribute="top" secondItem="pCy-0N-yLp" secondAttribute="topMargin" constant="15" id="HTT-zc-97I"/>
-                    <constraint firstItem="Wuy-eB-7tm" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="-8" id="IpN-57-cfz"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wIq-ra-Qyo" secondAttribute="trailing" constant="51" id="KvV-b0-A0h"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="qcU-8L-ScP" secondAttribute="trailing" constant="297" id="Ma9-Ti-i7W"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="wsY-0e-sdf" secondAttribute="bottom" constant="-8" id="PBc-73-ExZ"/>
-                    <constraint firstItem="wIq-ra-Qyo" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="51" id="RWt-VB-01w"/>
-                    <constraint firstItem="rvB-jU-LRy" firstAttribute="leading" secondItem="pCy-0N-yLp" secondAttribute="leadingMargin" constant="77" id="i2h-cn-P0s"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="rvB-jU-LRy" secondAttribute="bottom" constant="28" id="kxM-ug-ht1"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Mcy-sf-qIn" secondAttribute="trailing" constant="86" id="nhM-GL-cRn"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wsY-0e-sdf" secondAttribute="trailing" constant="-8" id="sjq-ox-6De"/>
-                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="bottomView" destination="GzV-Bj-WWD" id="9cx-1O-yOe"/>
                 <outlet property="parkAddressLabel" destination="rvB-jU-LRy" id="edd-Kk-nA7"/>
                 <outlet property="parkNameLabel" destination="Mcy-sf-qIn" id="NhG-Es-WJw"/>
                 <outlet property="parkWashroomLabel" destination="wIq-ra-Qyo" id="uOU-a0-CKx"/>
@@ -101,7 +56,4 @@
             <point key="canvasLocation" x="-167" y="-3.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Tree" width="35" height="46"/>
-    </resources>
 </document>

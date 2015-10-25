@@ -61,7 +61,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             cameraView.cameraOverlayView = cameraOverlay
             
             
-            self.presentViewController(cameraView, animated: true, completion: nil)
+            self.presentViewController(cameraView, animated: false, completion: nil)
         }
 		
 		
