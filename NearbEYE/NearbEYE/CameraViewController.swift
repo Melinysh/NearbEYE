@@ -28,7 +28,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     var cameraOverlay : CameraOverlayView!
 	
 	var coreDataComm : CoreDataCommunicator!
-	
+	let cameraView = UIImagePickerController()
+
 	var attractionsNearby = [AnyObject]()
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,7 +54,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		super.viewDidAppear(animated)
         
         if (cameraOverlay == nil) {
-            let cameraView = UIImagePickerController()
             let screenSize = UIScreen.mainScreen().bounds.size
             cameraView.sourceType = UIImagePickerControllerSourceType.Camera
             cameraView.delegate = self
@@ -186,6 +186,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
         vc.userLocation = lastLocation.coordinate
 		vc.attraction = attractionsNearby[indexPath.row]
+		cameraView.pushViewController(vc, animated: true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
