@@ -14,8 +14,8 @@ enum Direction {
 	case North, East, South, West
 }
 
-let kLatitudeRange = 0.05
-let kLongitudeRange = 0.05
+let kLatitudeRange = 0.005
+let kLongitudeRange = 0.005
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource  {
 
@@ -241,6 +241,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		let minLong = lastLocation.coordinate.longitude + longOffset.1
 		print("\(dir)  Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
 		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
+		print("\(attractionsNearby.count) attractions found in direction \(dir)")
 		cameraOverlay.attractionsList.reloadData()
         if (attractionsNearby.count == 0) {
             cameraOverlay.nothingNearbEYELabel.hidden = false
@@ -250,25 +251,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
 	}
 	
-	func latitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
+	func longitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
 		if (dir == .North || dir == .South) {
-			return (kLatitudeRange, -kLatitudeRange)
+			return (kLongitudeRange, -kLongitudeRange)
 		}
 		if (dir == .East) {
-			return (2 * kLatitudeRange, 0)
+			return (2 * kLongitudeRange, 0)
 		} else {
-			return (0, 2 * kLatitudeRange)
+			return (0, -2 * kLongitudeRange)
 		}
 	}
 	
-	func longitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
+	func latitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {
 		if (dir == .East || dir == .West) {
-			return (kLongitudeRange, -kLongitudeRange)
+			return (kLatitudeRange, -kLatitudeRange)
 		}
 		if (dir == .North) {
-			return (2 * kLongitudeRange, 0)
+			return (2 * kLatitudeRange, 0)
 		} else {
-			return (0, 2 * kLongitudeRange)
+			return (0, -2 * kLatitudeRange)
 		}
 	}
 	

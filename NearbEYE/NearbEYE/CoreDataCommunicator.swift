@@ -42,7 +42,7 @@ class CoreDataCommunicator {
 		var results =  [AnyObject]()
 		for name in classNames {
 			let fetchReq = fetchRequest(name)
-			fetchReq.predicate = NSPredicate(format: "(latitude <= %@) && (latitude >= %@) && (longitude >= %@) && (longitude <= %@)", argumentArray: [maxLat, minLat, maxLong, minLong])
+			fetchReq.predicate = NSPredicate(format: "(latitude <= %@) && (latitude >= %@) && (longitude >= %@) && (longitude <= %@)", argumentArray: [maxLat, minLat, minLong, maxLong])
 			let objs = fetch(fetchReq)
 			results += objs
 		}
