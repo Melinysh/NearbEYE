@@ -20,30 +20,7 @@ extension Bool {
 
 class DetailAttractionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var attraction : AnyObject! {
-		didSet {
-			propertiesList = (attraction.performSelector("propertyList").takeRetainedValue() as! [String])
-			let request = MKDirectionsRequest()
-			request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation, addressDictionary: nil))
-			request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
-			request.transportType = MKDirectionsTransportType.Walking
-			let directions = MKDirections(request: request)
-			directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
-				if let error = error {
-					print("There was an error calculating the route \(error)")
-					return
-				}
-				if let resp = response {
-					self.directions = resp
-					if let route = resp.routes.first {
-						self.mapView.addOverlay(route.polyline)
-						self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-					}
-				}
-			}
-			
-		}
-	}
+	var attraction : AnyObject!
 	
 	var propertiesList = [String]()
  
@@ -58,29 +35,61 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	@IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		propertiesList = (attraction.performSelector("propertyList").retain().takeRetainedValue() as! [String])
+		let request = MKDirectionsRequest()
+		request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation, addressDictionary: nil))
+		request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
+		request.transportType = MKDirectionsTransportType.Walking
+		let directions = MKDirections(request: request)
+		directions.calculateDirectionsWithCompletionHandler { (response, error) -> Void in
+			if let error = error {
+				print("There was an error calculating the route \(error)")
+				return
+			}
+			if let resp = response {
+				self.directions = resp
+				if let route = resp.routes.first {
+					self.mapView.addOverlay(route.polyline)
+					//self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+				}
+			}
+		}
+		
 		tableView.dataSource = self
 		tableView.delegate = self
 	
 		
-		titleLabel.text = String(attraction.dynamicType)
-
-		
-		mapView.showsUserLocation = true
-		mapView.showsCompass = true
-		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
+		titleLabel.text = (attraction.performSelector("selfName").retain().takeRetainedValue() as! String)
 		
 		tableView.estimatedRowHeight = 44.0
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.reloadData()
 		
-		let location = mapView.userLocation
-		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-		
-		mapView.setRegion(region, animated: true)
+		let swipe = UISwipeGestureRecognizer(target: self, action: "moveBack")
+		swipe.direction = UISwipeGestureRecognizerDirection.Right
+		self.view.addGestureRecognizer(swipe)
 		
 		// Do any additional setup after loading the view.
     }
+	
+	override func viewDidAppear(animated: Bool) {
+		
+
+		
+		let location = mapView.userLocation
+		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
+		
+		mapView.setRegion(region, animated: true)
+		mapView.showsUserLocation = true
+		mapView.showsCompass = true
+		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
+	}
+	
+	func moveBack() {
+		self.performSegueWithIdentifier("toMain", sender: nil)
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -142,6 +151,14 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 				}
 			}
 		return firstword.capitalizedString + " " + secondword.capitalizedString
+	}
+	
+	// MARK: - Custom Segue
+	
+	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
+		return CustomDetailUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+			print("Unwinding from detail vc")
+		})
 	}
 
 }

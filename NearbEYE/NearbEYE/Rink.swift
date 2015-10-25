@@ -12,8 +12,11 @@ import CoreData
 
 @objc (Rink)
 
-class Rink: NSManagedObject {
+class Rink: NSManagedObject, Stringify {
 
 // Insert code here to add functionality to your managed object subclass
 
+	func selfName() -> String {
+		return name != nil ? name! : "Rink"
+	}
 }

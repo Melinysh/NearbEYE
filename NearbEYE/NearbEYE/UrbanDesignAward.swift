@@ -11,8 +11,12 @@ import CoreData
 
 @objc (UrbanDesignAward)
 
-class UrbanDesignAward: NSManagedObject {
+class UrbanDesignAward: NSManagedObject, Stringify {
 
 // Insert code here to add functionality to your managed object subclass
 
+	func selfName() -> String {
+		return projectName!
+	}
+	
 }

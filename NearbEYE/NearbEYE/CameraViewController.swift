@@ -28,8 +28,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     var cameraOverlay : CameraOverlayView!
 	
 	var coreDataComm : CoreDataCommunicator!
-	
+	let cameraView = UIImagePickerController()
+
 	var attractionsNearby = [AnyObject]()
+	var selectionAttraction : AnyObject!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -40,61 +42,52 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		coreDataComm = CoreDataCommunicator(c: self.context)
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        let status = CLLocationManager.authorizationStatus()
-        if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
-            locationManager.requestWhenInUseAuthorization()
-		} else {
-			startHeadingAndLocation()
-		}
-		
+     //   let status = CLLocationManager.authorizationStatus()
+        locationManager.requestWhenInUseAuthorization()
+        startHeadingAndLocation()
     }
     
     override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
         
         if (cameraOverlay == nil) {
-            let cameraView = UIImagePickerController()
             let screenSize = UIScreen.mainScreen().bounds.size
             cameraView.sourceType = UIImagePickerControllerSourceType.Camera
             cameraView.delegate = self
             cameraView.showsCameraControls = false
             cameraView.cameraViewTransform = CGAffineTransformTranslate(CGAffineTransformMakeScale(4.2/3.0, 4.2/3.0), 0, screenSize.height / 10.0)
             
-            cameraOverlay = CameraOverlayView(frame: CGRectMake(0, 0, screenSize.width, screenSize.height * 2), vc: self)
+            cameraOverlay = CameraOverlayView(frame: self.view.bounds, vc: self)
             cameraView.cameraOverlayView = cameraOverlay
             
             
             self.presentViewController(cameraView, animated: true, completion: nil)
         }
-        
+		
+		
         
         
 		// Do any additional setup after loading the view, typically from a nib.
 	}
-    
-    override func viewWillDisappear(animated: Bool) {
-        locationManager.stopUpdatingHeading()
-        locationManager.stopUpdatingLocation()
-    }
-
+	
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
     
-    func presentDetailViewControllerForAttraction(attraction: AnyObject?) {
-        //TODO implement this
-        stopHeadingAndLocation()
+    func presentDetailViewControllerForAttractionNumber(attractionNumber: Int) {
+		selectionAttraction = attractionsNearby[attractionNumber]
+		self.performSegueWithIdentifier("toDetail", sender: self)
     }
     
     //MARK: - Location Manager Methods
     
     func startHeadingAndLocation() {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
-            lastHeading = locationManager.heading
-            lastLocation = locationManager.location
             locationManager.startUpdatingHeading()
             locationManager.startUpdatingLocation()
+            print("Starting updates")
         }
     }
     
@@ -107,14 +100,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         print(status.rawValue)
-        if (status == CLAuthorizationStatus.AuthorizedWhenInUse) {
-            startHeadingAndLocation()
-        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
         if (lastHeading == nil) {
             lastHeading = newHeading
+			refreshAttractions()
         }
         else if (fabs(newHeading.magneticHeading - lastHeading.magneticHeading) >= minimumHeadingChangeForRefresh) {
             lastHeading = newHeading
@@ -126,11 +117,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         if (lastLocation == nil) {
             lastLocation = newLocation
-            
+			refreshAttractions()
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
-			
 			refreshAttractions()
             print(lastLocation)
         }
@@ -139,7 +129,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return UIScreen.mainScreen().bounds.height
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -180,12 +170,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        presentDetailViewControllerForAttraction(nil)
-        //TODO segue to detail vc
-		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
-        vc.userLocation = lastLocation.coordinate
-		vc.attraction = attractionsNearby[indexPath.row]
+        //TODO is there no way to disable selection? Fuck it i'll do it later
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -271,6 +256,24 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		} else {
 			return .West
 		}
+	}
+	
+	//MARK: - Custom Segues
+	@IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+		
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		// set properties for detail vc here
+		let vc = segue.destinationViewController as! DetailAttractionViewController
+		vc.attraction = selectionAttraction
+		vc.userLocation = self.lastLocation.coordinate		
+	}
+	
+	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
+		return CustomDetailUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+			print("Unwinding from detail vc")
+		})
 	}
 	
 }
