@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C9CA46B1BDD65A000996FB8 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CA4691BDD65A000996FB8 /* TableViewCellParks.swift */; };
+		2C9CA46C1BDD65A000996FB8 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CA46A1BDD65A000996FB8 /* TableViewCellParks.xib */; };
 		930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */; };
 		930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */; };
 		930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */; };
 		930CCFDD1BDC272400B2A422 /* TableViewCellUrbanDesign.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */; };
-		93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */; };
-		93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */; };
 		93387DE21BDC03C1009B7963 /* TableViewCellSportField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */; };
 		93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */; };
 		93387DE61BDC064C009B7963 /* TableViewCellPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */; };
@@ -82,12 +82,12 @@
 		2C4D72AA1BDC0892005ECB36 /* SingleViewCoreData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = SingleViewCoreData.sqlite; path = ../SingleViewCoreData.sqlite; sourceTree = "<group>"; };
 		2C4D72AB1BDC0892005ECB36 /* SingleViewCoreData.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SingleViewCoreData.sqlite-shm"; path = "../SingleViewCoreData.sqlite-shm"; sourceTree = "<group>"; };
 		2C4D72AC1BDC0892005ECB36 /* SingleViewCoreData.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SingleViewCoreData.sqlite-wal"; path = "../SingleViewCoreData.sqlite-wal"; sourceTree = "<group>"; };
+		2C9CA4691BDD65A000996FB8 /* TableViewCellParks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellParks.swift; sourceTree = "<group>"; };
+		2C9CA46A1BDD65A000996FB8 /* TableViewCellParks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellParks.xib; sourceTree = "<group>"; };
 		930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPOI.swift; sourceTree = "<group>"; };
 		930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPOI.xib; sourceTree = "<group>"; };
 		930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUrbanDesign.swift; sourceTree = "<group>"; };
 		930CCFDB1BDC272400B2A422 /* TableViewCellUrbanDesign.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUrbanDesign.xib; sourceTree = "<group>"; };
-		93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellParks.swift; sourceTree = "<group>"; };
-		93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellParks.xib; sourceTree = "<group>"; };
 		93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellSportField.swift; sourceTree = "<group>"; };
 		93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellSportField.xib; sourceTree = "<group>"; };
 		93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPlayground.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		93387DDB1BDBFC24009B7963 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				93387DDC1BDBFC75009B7963 /* TableViewCellParks.swift */,
-				93387DDD1BDBFC75009B7963 /* TableViewCellParks.xib */,
+				2C9CA4691BDD65A000996FB8 /* TableViewCellParks.swift */,
+				2C9CA46A1BDD65A000996FB8 /* TableViewCellParks.xib */,
 				93387DE01BDC03C1009B7963 /* TableViewCellSportField.swift */,
 				93387DE11BDC03C1009B7963 /* TableViewCellSportField.xib */,
 				93387DE41BDC064C009B7963 /* TableViewCellPlayground.swift */,
@@ -353,7 +353,6 @@
 				DC169ED41BDBCA5300742B9A /* LaunchScreen.storyboard in Resources */,
 				DC169ED11BDBCA5300742B9A /* Assets.xcassets in Resources */,
 				93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */,
-				93387DDF1BDBFC75009B7963 /* TableViewCellParks.xib in Resources */,
 				DC169EE71BDBCD1800742B9A /* PointsOfInterest.json in Resources */,
 				DC169EE91BDBCD1800742B9A /* SportsFieldsDiamonds.json in Resources */,
 				93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */,
@@ -361,6 +360,7 @@
 				93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */,
 				DC169EE61BDBCD1800742B9A /* Playgrounds.json in Resources */,
 				93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */,
+				2C9CA46C1BDD65A000996FB8 /* TableViewCellParks.xib in Resources */,
 				DC169EE81BDBCD1800742B9A /* PublicArt.json in Resources */,
 				DC169EEA1BDBCD1800742B9A /* UrbanDesignAwards.json in Resources */,
 				DC169EE51BDBCD1800742B9A /* PlacesOfWorship.json in Resources */,
@@ -393,7 +393,6 @@
 				DC169F291BDBF5C400742B9A /* CoreDataCommunicator.swift in Sources */,
 				DC169EEE1BDBD45E00742B9A /* Operation.swift in Sources */,
 				93387DEA1BDC084B009B7963 /* TableViewCellRink.swift in Sources */,
-				93387DDE1BDBFC75009B7963 /* TableViewCellParks.swift in Sources */,
 				DC169F121BDBD6BC00742B9A /* Art+CoreDataProperties.swift in Sources */,
 				DC169F061BDBD6BC00742B9A /* PointOfInterest+CoreDataProperties.swift in Sources */,
 				DC169F0F1BDBD6BC00742B9A /* Park.swift in Sources */,
@@ -406,6 +405,7 @@
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
 				DC169F0A1BDBD6BC00742B9A /* PlacesOfWorship+CoreDataProperties.swift in Sources */,
 				930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */,
+				2C9CA46B1BDD65A000996FB8 /* TableViewCellParks.swift in Sources */,
 				930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */,
 				93387DF21BDC132C009B7963 /* TableViewCellArt.swift in Sources */,
 				DC03E1F71BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift in Sources */,
