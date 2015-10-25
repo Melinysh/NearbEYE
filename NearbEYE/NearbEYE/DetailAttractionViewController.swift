@@ -66,7 +66,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		tableView.estimatedRowHeight = 44.0
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.reloadData()
-		
+	
 		
 		let swipe = UISwipeGestureRecognizer(target: self, action: "moveBack:")
 		swipe.direction = UISwipeGestureRecognizerDirection.Right
@@ -121,6 +121,9 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		}
 	}
 	
+	override func prefersStatusBarHidden() -> Bool {
+		return true
+	}
 	
 	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return 1
@@ -129,8 +132,14 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		if let cell = tableView.dequeueReusableCellWithIdentifier("cell") as? DetailTableViewCell {
 			let propertyName = propertiesList[indexPath.row]
-			cell.propertyTitle.text =  wordify(propertyName)
-			cell.propertyValue.text  = attraction.valueForKey(propertyName) != nil ? String(attraction.valueForKey(propertyName)!) : "Unknown"
+			if (propertyName.lowercaseString.containsString("url")) {
+				cell.propertyValue.text = "Open in Safari"
+				cell.propertyValue.textColor = self.view.tintColor
+				cell.propertyTitle.text  = ""
+			} else {
+				cell.propertyTitle.text =  wordify(propertyName)
+				cell.propertyValue.text  = attraction.valueForKey(propertyName) != nil ? String(attraction.valueForKey(propertyName)!) : "Unknown"
+			}
 			
 			return cell
 		}
@@ -143,7 +152,22 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		return propertiesList.count
 	}
 	
+	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+		let property = propertiesList[indexPath.row]
+		if property.lowercaseString.containsString("url") {
+			let urlStr = String(attraction.valueForKey(property)!)
+			UIApplication.sharedApplication().openURL(NSURL(string: urlStr)!)
+		}
+	}
 	
+	func didTapButton() {
+		for property in propertiesList {
+			if (property.lowercaseString.containsString("url")) {
+				let urlStr = String(attraction.valueForKey(property)!)
+				UIApplication.sharedApplication().openURL(NSURL(string: urlStr)!)
+			}
+		}
+	}
 
 	
     // MARK: - Navigation

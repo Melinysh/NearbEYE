@@ -26,6 +26,6 @@ class TableViewCellRink: UITableViewCell {
     //Saving description for expanded table cell as 20+ words 
     static func configureCell(cell : TableViewCellRink, data : Rink) {
         cell.rinkNameLabel.text = (data.name)
-        cell.rinkScheduleLabel.text = "Rink schedule: " + String(data.schedule_url)
+		cell.rinkScheduleLabel.text = "Rink schedule: " + (data.schedule_url != nil ?  String(data.schedule_url!) : "Not available")
     }
 }

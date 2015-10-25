@@ -15,20 +15,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="667.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Artrist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S63-HR-ivI">
-                        <rect key="frame" x="208" y="12" width="156.5" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Art Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW7-hr-j2i">
+                        <rect key="frame" x="17" y="12" width="346" height="24"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Art Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW7-hr-j2i">
-                        <rect key="frame" x="17" y="12" width="131.5" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Year Installed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-5O-D9I">
+                        <rect key="frame" x="111.5" y="593" width="155.5" height="20.5"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
-                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Art URL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smu-B4-Q2F">
@@ -38,16 +38,16 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="347.5" id="oYt-OL-ETx"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Year Installed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-5O-D9I">
-                        <rect key="frame" x="115" y="593" width="148" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Artrist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S63-HR-ivI">
+                        <rect key="frame" x="104" y="44" width="173" height="24"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" red="0.66541055000000005" green="0.86937661470000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -57,11 +57,14 @@
                     <constraint firstItem="Ed0-5O-D9I" firstAttribute="bottom" secondItem="y8n-2q-cNA" secondAttribute="bottomMargin" id="4h2-gE-dV2"/>
                     <constraint firstItem="S63-HR-ivI" firstAttribute="top" secondItem="y8n-2q-cNA" secondAttribute="topMargin" constant="4" id="6Jn-NV-zxv"/>
                     <constraint firstItem="smu-B4-Q2F" firstAttribute="top" secondItem="Ed0-5O-D9I" secondAttribute="bottom" constant="25.5" id="BXL-qd-fWs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="fW7-hr-j2i" secondAttribute="trailing" constant="7" id="IrA-8l-dCQ"/>
                     <constraint firstAttribute="trailingMargin" secondItem="smu-B4-Q2F" secondAttribute="trailing" constant="17" id="NWX-YD-1CO"/>
                     <constraint firstItem="smu-B4-Q2F" firstAttribute="top" secondItem="Ed0-5O-D9I" secondAttribute="bottom" constant="24.5" id="Qc6-lh-Rxa"/>
                     <constraint firstItem="smu-B4-Q2F" firstAttribute="bottom" secondItem="y8n-2q-cNA" secondAttribute="bottomMargin" id="Spl-pd-GuP"/>
                     <constraint firstItem="fW7-hr-j2i" firstAttribute="leading" secondItem="y8n-2q-cNA" secondAttribute="leadingMargin" constant="9" id="Vo1-uT-Rov"/>
                     <constraint firstItem="smu-B4-Q2F" firstAttribute="centerX" secondItem="y8n-2q-cNA" secondAttribute="centerX" id="XIg-18-Geb"/>
+                    <constraint firstItem="S63-HR-ivI" firstAttribute="top" secondItem="fW7-hr-j2i" secondAttribute="bottom" constant="8" id="Z6B-v3-5q8"/>
+                    <constraint firstItem="S63-HR-ivI" firstAttribute="centerX" secondItem="fW7-hr-j2i" secondAttribute="centerX" id="e7v-op-QQV"/>
                     <constraint firstItem="S63-HR-ivI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fW7-hr-j2i" secondAttribute="trailing" constant="10" id="mCg-L5-Tac"/>
                     <constraint firstItem="Ed0-5O-D9I" firstAttribute="leading" secondItem="y8n-2q-cNA" secondAttribute="leadingMargin" id="ovh-lY-5Vr"/>
                     <constraint firstItem="Ed0-5O-D9I" firstAttribute="centerX" secondItem="smu-B4-Q2F" secondAttribute="centerX" id="r4G-6y-UAN"/>
@@ -69,6 +72,9 @@
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="3lH-16-pM7"/>
+                        <exclude reference="6Jn-NV-zxv"/>
+                        <exclude reference="mCg-L5-Tac"/>
                         <exclude reference="4h2-gE-dV2"/>
                         <exclude reference="ovh-lY-5Vr"/>
                         <exclude reference="NWX-YD-1CO"/>
