@@ -28,8 +28,8 @@ class TableViewCellArt: UITableViewCell {
     static func configureCell(cell : TableViewCellArt, data : Art) {
         cell.artNameLabel.text = (data.name)
         cell.artArtistLabel.text = (data.artist)
-        cell.artURLLabel.text = "URL" + String(data.url)
-        cell.artYearLabel.text = "Year installed : " + String(data.yearInstalled)
+		cell.artURLLabel.text = data.url != nil ? "URL: " + data.url! : ""
+		cell.artYearLabel.text =  data.yearInstalled != nil ? "Year installed : " + String(data.yearInstalled!) : ""
     }
     
 }
