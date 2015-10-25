@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Playgrounds)
+@objc(Playground)
 
 class Playground: NSManagedObject, Stringify {
 

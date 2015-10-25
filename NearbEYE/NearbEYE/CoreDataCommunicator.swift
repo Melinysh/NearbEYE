@@ -47,12 +47,12 @@ class CoreDataCommunicator {
 			results += objs
 		}
 		results.sortInPlace { (one, two) -> Bool in
-			return dist(one.valueForKey("latitude") as! Double, longitude: one.valueForKey("longitude") as! Double, userLocaltion: userLocation) < dist(two.valueForKey("latitude") as! Double, longitude: two.valueForKey("longitude") as! Double, userLocaltion: userLocation)
+			return CoreDataCommunicator.dist(one.valueForKey("latitude") as! Double, longitude: one.valueForKey("longitude") as! Double, userLocaltion: userLocation) < CoreDataCommunicator.dist(two.valueForKey("latitude") as! Double, longitude: two.valueForKey("longitude") as! Double, userLocaltion: userLocation)
 		}
 		return results
 	}
 	
-	private func dist(latitude :Double, longitude : Double, userLocaltion : CLLocationCoordinate2D) -> Double {
+	class func dist(latitude :Double, longitude : Double, userLocaltion : CLLocationCoordinate2D) -> Double {
 		return sqrt(pow((latitude - userLocaltion.latitude), 2) + pow((longitude - userLocaltion.longitude),2.0))
 	}
 }

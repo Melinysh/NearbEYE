@@ -39,9 +39,11 @@ class NEImagePickerController: UIImagePickerController {
 	}
 	
 	
-	func pushToVC(vc : DetailAttractionViewController) {
+	func pushToVC(vc : UIViewController) {
 		self.pushViewController(vc, animated: true)
 	}
+    
+    
 
 	
     
