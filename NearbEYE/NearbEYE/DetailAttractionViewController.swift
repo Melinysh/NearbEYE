@@ -26,7 +26,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
  
 	var directions : MKDirectionsResponse!
     var userLocation : CLLocationCoordinate2D!
-	
+	var prevVC : CameraViewController!
 
 	@IBOutlet weak var mapView: MKMapView!
 	
@@ -66,7 +66,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.reloadData()
 		
-		let swipe = UISwipeGestureRecognizer(target: self, action: "moveBack")
+		let swipe = UISwipeGestureRecognizer(target: self, action: "moveBack:")
 		swipe.direction = UISwipeGestureRecognizerDirection.Right
 		self.view.addGestureRecognizer(swipe)
 		
@@ -87,8 +87,15 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
 	}
 	
-	func moveBack() {
-		self.performSegueWithIdentifier("toMain", sender: nil)
+	func moveBack(gest : UIGestureRecognizer) {
+		if gest.state == .Ended {
+			NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+				self.performSegueWithIdentifier("unwindToMain", sender: self)
+			})
+		}
+//		self.unwindForSegue(CustomDetailUnwindSegue(identifier: "toMain", source: self, destination: prevVC, performHandler: { () -> Void in
+//			
+//		}), towardsViewController: prevVC)
 	}
 
     override func didReceiveMemoryWarning() {
@@ -127,15 +134,16 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	
 	
 
-    /*
+	
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		
     }
-    */
+	
 
 	
 	func wordify(str :String) -> String {
@@ -155,10 +163,6 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	
 	// MARK: - Custom Segue
 	
-	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
-		return CustomDetailUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
-			print("Unwinding from detail vc")
-		})
-	}
+	
 
 }

@@ -20,12 +20,12 @@ class CustomDetailUnwindSegue: UIStoryboardSegue {
 
 		
 		let window = UIApplication.sharedApplication().keyWindow
-		window?.insertSubview(firstVCView, aboveSubview: secondVCView)
+		window?.insertSubview(firstVCView, belowSubview: secondVCView)
 		
 		
 		// Animate the transition.
 		UIView.animateWithDuration(0.4, animations: { () -> Void in
-		firstVCView.frame = CGRectOffset(firstVCView.frame, screenWidth, 0.0)
+		firstVCView.frame = CGRectOffset(firstVCView.frame, 0.0, 0.0)
 		secondVCView.frame = CGRectOffset(secondVCView.frame, -screenWidth, 0.0)
 		
 		}) { (Finished) -> Void in

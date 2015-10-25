@@ -7,16 +7,25 @@
 //
 
 import UIKit
+import QuartzCore
 
 class TableViewCellParks: UITableViewCell {
     
     @IBOutlet weak var parkNameLabel: UILabel!
     @IBOutlet weak var parkAddressLabel: UILabel!
     @IBOutlet weak var parkWashroomLabel: UILabel!
+    @IBOutlet var bottomView : UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        let translucentWhite = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.55).CGColor
+        
+        let gradientBottom = CAGradientLayer()
+        gradientBottom.frame = bottomView.bounds
+        gradientBottom.colors = [translucentWhite, translucentWhite, UIColor.clearColor().CGColor, UIColor.clearColor().CGColor, translucentWhite, translucentWhite]
+        gradientBottom.locations = [0.0, 0.08, 0.35, 0.65, 0.92, 0.0]
+        bottomView.layer.mask = gradientBottom
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
