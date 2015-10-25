@@ -98,7 +98,7 @@
                 <outlet property="parkNameLabel" destination="Mcy-sf-qIn" id="NhG-Es-WJw"/>
                 <outlet property="parkWashroomLabel" destination="wIq-ra-Qyo" id="uOU-a0-CKx"/>
             </connections>
-            <point key="canvasLocation" x="-167" y="-3.5"/>
+            <point key="canvasLocation" x="-134" y="-1339.5"/>
         </tableViewCell>
     </objects>
     <resources>
