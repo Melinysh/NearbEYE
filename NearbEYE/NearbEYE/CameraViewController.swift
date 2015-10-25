@@ -61,7 +61,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             cameraView.cameraOverlayView = cameraOverlay
             
             
-            self.presentViewController(cameraView, animated: true, completion: nil)
+            self.presentViewController(cameraView, animated: false, completion: nil)
         }
 		
 		
@@ -177,10 +177,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         return attractionsNearby.count
     }
     
-    /*func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        let tableView = scrollView as! UITableView
-        tableView.scrollToRowAtIndexPath(tableView., atScrollPosition: UITableViewScrollPosition.Top, animated: true)
-    }*/
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage mage: UIImage, editingInfo: [String : AnyObject]?) {
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+    }
 
 	func wordify(str :String) -> String {
 		var firstword = ""

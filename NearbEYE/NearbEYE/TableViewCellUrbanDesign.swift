@@ -31,5 +31,4 @@ class TableViewCellUrbanDesign: UITableViewCell {
         cell.urbandesignAwardLabel.text = (data.awardName)
         cell.urbandesignAddressLabel.text = (data.address)
     }
-    
 }
