@@ -56,7 +56,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             cameraView.showsCameraControls = false
             cameraView.cameraViewTransform = CGAffineTransformTranslate(CGAffineTransformMakeScale(4.2/3.0, 4.2/3.0), 0, screenSize.height / 10.0)
             
-            cameraOverlay = CameraOverlayView(frame: CGRectMake(0, 0, screenSize.width, screenSize.height * 2), vc: self)
+            cameraOverlay = CameraOverlayView(frame: self.view.bounds, vc: self)
             cameraView.cameraOverlayView = cameraOverlay
             
             
@@ -73,9 +73,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		// Dispose of any resources that can be recreated.
 	}
     
-    func presentDetailViewControllerForAttraction(attraction: AnyObject?) {
+    func presentDetailViewControllerForAttractionNumber(attractionNumber: Int) {
         //TODO implement this
+        print("presenting")
         stopHeadingAndLocation()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+        vc.userLocation = lastLocation.coordinate
+        vc.attraction = attractionsNearby[attractionNumber]
+        cameraView.pushViewController(vc, animated: true)
     }
     
     //MARK: - Location Manager Methods
@@ -124,7 +129,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 120
+        return UIScreen.mainScreen().bounds.height
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -165,31 +170,17 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        presentDetailViewControllerForAttraction(nil)
-        //TODO segue to detail vc
-		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
-        vc.userLocation = lastLocation.coordinate
-		vc.attraction = attractionsNearby[indexPath.row]
-		cameraView.pushViewController(vc, animated: true)
+        //TODO is there no way to disable selection? Fuck it i'll do it later
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return attractionsNearby.count
     }
     
-
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        
-    }
+    /*func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let tableView = scrollView as! UITableView
+        tableView.scrollToRowAtIndexPath(tableView., atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+    }*/
 
 	func wordify(str :String) -> String {
 		var firstword = ""
