@@ -28,7 +28,7 @@
         <attribute name="toboggans" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="washrooms" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="PlaceOfWorship" representedClassName="PlacesOfWorship" syncable="YES">
+    <entity name="PlaceOfWorship" representedClassName="PlaceOfWorship" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -72,12 +72,12 @@
         <attribute name="projectName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Rink" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Art" positionX="124" positionY="38" width="128" height="133"/>
         <element name="Park" positionX="-243" positionY="36" width="128" height="313"/>
         <element name="PlaceOfWorship" positionX="-45" positionY="210" width="128" height="103"/>
         <element name="Playground" positionX="-279" positionY="486" width="128" height="88"/>
         <element name="PointOfInterest" positionX="106" positionY="339" width="128" height="118"/>
-        <element name="Art" positionX="124" positionY="38" width="128" height="133"/>
+        <element name="Rink" positionX="-63" positionY="-18" width="128" height="118"/>
         <element name="SportField" positionX="-425" positionY="126" width="128" height="148"/>
         <element name="UrbanDesignAward" positionX="331" positionY="165" width="128" height="148"/>
     </elements>

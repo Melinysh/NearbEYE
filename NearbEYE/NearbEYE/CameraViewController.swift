@@ -43,7 +43,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let status = CLLocationManager.authorizationStatus()
         if (status == CLAuthorizationStatus.Denied || status == CLAuthorizationStatus.NotDetermined) {
             locationManager.requestWhenInUseAuthorization()
-        }
+		} else {
+			startHeadingAndLocation()
+		}
+		
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -84,7 +87,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         stopHeadingAndLocation()
     }
     
-    //#MARK: locationManager
+    //MARK: - Location Manager Methods
     
     func startHeadingAndLocation() {
         if (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse) {
@@ -123,6 +126,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         if (lastLocation == nil) {
             lastLocation = newLocation
+            
         }
         else if (newLocation.distanceFromLocation(lastLocation) >= minimumDistanceChangeForRefresh) {
             lastLocation = newLocation
@@ -132,45 +136,46 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    //#MARK: tableView
+    //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let reuseId = "art"
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseId)!
         let obj = attractionsNearby[indexPath.row]
+        let reuseId = String(obj.dynamicType)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseId, forIndexPath: indexPath)
         switch (reuseId) {
-        case "art":
+        case NSStringFromClass(Art.self):
             TableViewCellArt.configureCell(cell as! TableViewCellArt, data: obj as! Art)
             break
-        case "parks":
+        case NSStringFromClass(Park.self):
             TableViewCellParks.configureCell(cell as! TableViewCellParks, data: obj as! Park)
             break
-        case "playground":
+        case NSStringFromClass(Playground.self):
             TableViewCellPlayground.configureCell(cell as! TableViewCellPlayground, data: obj as! Playground)
             break
-        case "poi":
+        case NSStringFromClass(PointOfInterest.self):
             TableViewCellPOI.configureCell(cell as! TableViewCellPOI, data: obj as! PointOfInterest)
             break
-        case "rink":
+        case NSStringFromClass(Rink.self):
             TableViewCellRink.configureCell(cell as! TableViewCellRink, data: obj as! Rink)
             break
-        case "sportfield":
+        case NSStringFromClass(SportField.self):
             TableViewCellSportField.configureCell(cell as! TableViewCellSportField, data: obj as! SportField)
             break
-        case "urbandesign":
+        case NSStringFromClass(UrbanDesignAward.self):
             TableViewCellUrbanDesign.configureCell(cell as! TableViewCellUrbanDesign, data: obj as! UrbanDesignAward)
             break
-        case "worship":
+        case NSStringFromClass(PlaceOfWorship.self):
             TableViewCellWorship.configureCell(cell as! TableViewCellWorship, data: obj as! PlaceOfWorship)
             break
         default:
             print("Invalid reuseID")
             break
         }
+        cell.backgroundColor = UIColor.clearColor()
         return cell
     }
     
@@ -179,6 +184,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         presentDetailViewControllerForAttraction(nil)
         //TODO segue to detail vc
 		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+        vc.userLocation = lastLocation.coordinate
 		vc.attraction = attractionsNearby[indexPath.row]
     }
     
@@ -216,6 +222,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	// MARK: - Attraction Finding Methods
 	func refreshAttractions() {
+        if (lastHeading == nil || lastLocation == nil) {
+            return
+        }
 		let dir = directionForHeading(lastHeading)
 		let latOffset = latitudeOffset(lastLocation.coordinate, dir: dir)
 		let longOffset = longitudeOffset(lastLocation.coordinate, dir: dir)
@@ -224,8 +233,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		let minLat = lastLocation.coordinate.latitude + latOffset.1
 		let maxLong = lastLocation.coordinate.longitude + longOffset.0
 		let minLong = lastLocation.coordinate.longitude + longOffset.1
-		print("Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
-		
+		print("\(dir)  Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
 		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
 		cameraOverlay.attractionsList.reloadData()
 	}

@@ -24,7 +24,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		didSet {
 			propertiesList = (attraction.performSelector("propertyList").takeRetainedValue() as! [String])
 			let request = MKDirectionsRequest()
-			request.source = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate, addressDictionary: nil))
+			request.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation, addressDictionary: nil))
 			request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2DMake(attraction.valueForKey("latitude") as! Double, attraction.valueForKey("longitude") as! Double) , addressDictionary: nil))
 			request.transportType = MKDirectionsTransportType.Walking
 			let directions = MKDirections(request: request)
@@ -48,6 +48,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	var propertiesList = [String]()
  
 	var directions : MKDirectionsResponse!
+    var userLocation : CLLocationCoordinate2D!
 	
 
 	@IBOutlet weak var mapView: MKMapView!
