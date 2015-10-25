@@ -7,57 +7,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SportField" rowHeight="120" id="KGk-i7-Jjw" customClass="TableViewCellSportField" customModule="NearbEYE" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="113"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SportField" rowHeight="674" id="KGk-i7-Jjw" customClass="TableViewCellSportField" customModule="NearbEYE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="500" height="112"/>
+                <rect key="frame" x="0.0" y="0.0" width="377" height="666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Has Parking? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nu-hs-Wfp">
-                        <rect key="frame" x="8" y="45" width="455" height="21"/>
+                        <rect key="frame" x="116" y="597" width="243" height="21"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insert Has Washrooms? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-Ad-uzA">
-                        <rect key="frame" x="8" y="74" width="455" height="21"/>
+                        <rect key="frame" x="97" y="626" width="255" height="21"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SportField " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfp-wC-ekB">
-                        <rect key="frame" x="8" y="16" width="455" height="21"/>
+                        <rect key="frame" x="142" y="15" width="217" height="24"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <animations/>
                 <constraints>
-                    <constraint firstItem="dfp-wC-ekB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="2pf-fH-YGr"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="rvc-Ad-uzA" secondAttribute="trailing" constant="29" id="4T7-aU-mTo"/>
-                    <constraint firstItem="0nu-hs-Wfp" firstAttribute="top" secondItem="dfp-wC-ekB" secondAttribute="bottom" constant="8" id="PQZ-3r-mWG"/>
-                    <constraint firstItem="0nu-hs-Wfp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Rsr-zN-Hl6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="0nu-hs-Wfp" secondAttribute="trailing" constant="29" id="RxF-Du-7f3"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="dfp-wC-ekB" secondAttribute="trailing" constant="29" id="aui-wC-lUp"/>
-                    <constraint firstItem="dfp-wC-ekB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="gHr-dl-YI1"/>
-                    <constraint firstItem="rvc-Ad-uzA" firstAttribute="top" secondItem="0nu-hs-Wfp" secondAttribute="bottom" constant="8" id="kYp-6d-UW0"/>
-                    <constraint firstItem="rvc-Ad-uzA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="zXe-Qs-T8q"/>
+                    <constraint firstItem="rvc-Ad-uzA" firstAttribute="top" secondItem="0nu-hs-Wfp" secondAttribute="bottom" constant="8" id="4MY-0E-uUF"/>
+                    <constraint firstItem="0nu-hs-Wfp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="108" id="7Ic-eA-DYC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="rvc-Ad-uzA" secondAttribute="bottom" constant="11" id="8Cm-J1-O20"/>
+                    <constraint firstItem="dfp-wC-ekB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="134" id="Icp-b9-cpL"/>
+                    <constraint firstItem="rvc-Ad-uzA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="89" id="Ork-PZ-3W3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0nu-hs-Wfp" secondAttribute="trailing" constant="10" id="Ru7-kD-8ZZ"/>
+                    <constraint firstItem="dfp-wC-ekB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="pIM-fe-PD6"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rvc-Ad-uzA" secondAttribute="trailing" constant="17" id="rTQ-sp-P15"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dfp-wC-ekB" secondAttribute="trailing" constant="10" id="wqi-d5-Wgj"/>
                 </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="sportParkingLabel" destination="0nu-hs-Wfp" id="YN7-xT-q6X"/>
+                <outlet property="sportParkingLabel" destination="0nu-hs-Wfp" id="NqZ-WK-A6x"/>
                 <outlet property="sportWashroomsLabel" destination="rvc-Ad-uzA" id="jrm-ZX-B4i"/>
             </connections>
-            <point key="canvasLocation" x="262" y="192.5"/>
+            <point key="canvasLocation" x="223.5" y="410.5"/>
         </tableViewCell>
     </objects>
 </document>

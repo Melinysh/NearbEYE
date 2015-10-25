@@ -193,7 +193,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage mage: UIImage, editingInfo: [String : AnyObject]?) {
         
     }
     
