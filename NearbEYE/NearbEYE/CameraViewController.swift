@@ -59,9 +59,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             cameraOverlay = CameraOverlayView(frame: self.view.bounds, vc: self)
             cameraView.cameraOverlayView = cameraOverlay
-            
-            
             self.presentViewController(cameraView, animated: false, completion: nil)
+            cameraOverlay.addSubview(cameraOverlay.nothingNearbEYELabel)
+            
         }
 		
 		
@@ -166,6 +166,22 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             break
         }
         cell.backgroundColor = UIColor.clearColor()
+        
+        if (cell.subviews[0].layer.mask == nil) {
+            let gradientView = UIView(frame: CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height))
+            gradientView.backgroundColor = UIColor.blackColor()
+            
+            let translucentWhite = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.55).CGColor
+            
+            let gradientBottom = CAGradientLayer()
+            gradientBottom.frame = gradientView.bounds
+            gradientBottom.colors = [translucentWhite, translucentWhite, UIColor.clearColor().CGColor, UIColor.clearColor().CGColor, translucentWhite, translucentWhite]
+            gradientBottom.locations = [0.0, 0.08, 0.35, 0.65, 0.92, 0.0]
+            gradientView.layer.mask = gradientBottom
+            
+            cell.insertSubview(gradientView, atIndex: 0)
+        }
+        
         return cell
     }
     
@@ -221,6 +237,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		print("\(dir)  Max lat: \(maxLat) min lat: \(minLat) max long: \(maxLong) min long \(minLong)")
 		attractionsNearby = coreDataComm.attractionsInRadius(maxLat, minLat: minLat, maxLong: maxLong, minLong: minLong, userLocation: lastLocation.coordinate)
 		cameraOverlay.attractionsList.reloadData()
+        if (attractionsNearby.count == 0) {
+            cameraOverlay.nothingNearbEYELabel.hidden = false
+        }
+        else {
+            cameraOverlay.nothingNearbEYELabel.hidden = true
+        }
 	}
 	
 	func latitudeOffset(userLocation : CLLocationCoordinate2D, dir :Direction) -> (Double, Double) {

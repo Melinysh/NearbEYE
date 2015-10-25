@@ -13,6 +13,8 @@ class CameraOverlayView: UIView, UIGestureRecognizerDelegate {
     var attractionsList : UITableView!
     var swipeRecog : UISwipeGestureRecognizer!
     var cameraVC : CameraViewController!
+    var nothingNearbEYELabel : UILabel!
+
     
     init(frame: CGRect, vc: CameraViewController) {
         super.init(frame: frame)
@@ -22,6 +24,14 @@ class CameraOverlayView: UIView, UIGestureRecognizerDelegate {
         swipeRecog = UISwipeGestureRecognizer(target: self, action: "moveToDetailVC")
         swipeRecog.direction = UISwipeGestureRecognizerDirection.Left
         self.addGestureRecognizer(swipeRecog)
+        
+        nothingNearbEYELabel = UILabel()
+        nothingNearbEYELabel.text = "Nothing NearbEYE"
+        nothingNearbEYELabel.font = UIFont(name: "System-Light", size: 18)
+        nothingNearbEYELabel.textColor = UIColor(red: 170.0/255.0, green: 222.0/255.0, blue: 255.0/255.0, alpha: 0.6)
+        nothingNearbEYELabel.sizeToFit()
+        nothingNearbEYELabel.center = CGPoint(x: self.center.x, y: nothingNearbEYELabel.frame.size.height / 2 + 20)
+        nothingNearbEYELabel.hidden = true
     }
 
     required init?(coder aDecoder: NSCoder) {

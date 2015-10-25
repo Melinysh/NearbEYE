@@ -14,10 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="666.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GzV-Bj-WWD">
-                        <rect key="frame" x="0.0" y="0.0" width="378" height="671"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Park Name Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-sf-qIn">
                         <rect key="frame" x="71" y="10" width="243" height="50"/>
                         <animations/>
@@ -48,7 +44,6 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="bottomView" destination="GzV-Bj-WWD" id="9cx-1O-yOe"/>
                 <outlet property="parkAddressLabel" destination="rvB-jU-LRy" id="edd-Kk-nA7"/>
                 <outlet property="parkNameLabel" destination="Mcy-sf-qIn" id="NhG-Es-WJw"/>
                 <outlet property="parkWashroomLabel" destination="wIq-ra-Qyo" id="uOU-a0-CKx"/>
