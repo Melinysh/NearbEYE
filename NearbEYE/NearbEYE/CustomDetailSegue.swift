@@ -29,7 +29,7 @@ class CustomDetailSegue: UIStoryboardSegue {
 		
 		// Animate the transition.
 		UIView.animateWithDuration(0.4, animations: { () -> Void in
-			firstVCView.frame = CGRectOffset(firstVCView.frame, screenWidth, 0)
+			firstVCView.frame = CGRectOffset(firstVCView.frame, -screenWidth, 0)
 			secondVCView.frame = CGRectOffset(secondVCView.frame, -screenWidth, 0)
 			
 			}) { (Finished) -> Void in

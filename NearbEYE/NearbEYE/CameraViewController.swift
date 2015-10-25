@@ -251,7 +251,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	}
 	
 	//MARK: - Custom Segues
-	@IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+
+	@IBAction func unwindFromDetail(segue: UIStoryboardSegue){
+		
+		
+		
+	}
+	
+	override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
 		
 	}
 	
@@ -259,13 +266,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 		// set properties for detail vc here
 		let vc = segue.destinationViewController as! DetailAttractionViewController
 		vc.attraction = selectionAttraction
-		vc.userLocation = self.lastLocation.coordinate		
+		vc.userLocation = self.lastLocation.coordinate
+		vc.prevVC = self
 	}
+
 	
-	override func segueForUnwindingToViewController(toViewController: UIViewController, fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue? {
-		return CustomDetailUnwindSegue(identifier: identifier, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
-			print("Unwinding from detail vc")
-		})
+	override func canPerformUnwindSegueAction(action: Selector, fromViewController: UIViewController, withSender sender: AnyObject) -> Bool {
+		return true
 	}
 	
 }

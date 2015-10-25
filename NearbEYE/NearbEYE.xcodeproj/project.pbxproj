@@ -25,6 +25,7 @@
 		93387DF31BDC132C009B7963 /* TableViewCellArt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93387DF11BDC132C009B7963 /* TableViewCellArt.xib */; };
 		DC03E1F51BDD2AE000E0E4F6 /* CustomDetailSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */; };
 		DC03E1F71BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */; };
+		DC03E1FB1BDD53AB00E0E4F6 /* NEImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03E1FA1BDD53AB00E0E4F6 /* NEImagePickerController.swift */; };
 		DC169EC71BDBCA5300742B9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC61BDBCA5300742B9A /* AppDelegate.swift */; };
 		DC169EC91BDBCA5300742B9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC169EC81BDBCA5300742B9A /* ViewController.swift */; };
 		DC169ECC1BDBCA5300742B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC169ECA1BDBCA5300742B9A /* Main.storyboard */; };
@@ -99,6 +100,7 @@
 		93387DF11BDC132C009B7963 /* TableViewCellArt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellArt.xib; sourceTree = "<group>"; };
 		DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDetailSegue.swift; sourceTree = "<group>"; };
 		DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDetailUnwindSegue.swift; sourceTree = "<group>"; };
+		DC03E1FA1BDD53AB00E0E4F6 /* NEImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEImagePickerController.swift; sourceTree = "<group>"; };
 		DC169EC31BDBCA5300742B9A /* NearbEYE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbEYE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC169EC61BDBCA5300742B9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC169EC81BDBCA5300742B9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				DC169ECA1BDBCA5300742B9A /* Main.storyboard */,
 				DC03E1F41BDD2AE000E0E4F6 /* CustomDetailSegue.swift */,
 				DC03E1F61BDD2BB000E0E4F6 /* CustomDetailUnwindSegue.swift */,
+				DC03E1FA1BDD53AB00E0E4F6 /* NEImagePickerController.swift */,
 				DC169F301BDC0C6600742B9A /* DetailTableViewCell.swift */,
 				DC169F2E1BDC059800742B9A /* DetailAttractionViewController.swift */,
 				DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */,
@@ -397,6 +400,7 @@
 				DC169F101BDBD6BC00742B9A /* UrbanDesignAward+CoreDataProperties.swift in Sources */,
 				DC169F0E1BDBD6BC00742B9A /* Park+CoreDataProperties.swift in Sources */,
 				DC169F311BDC0C6600742B9A /* DetailTableViewCell.swift in Sources */,
+				DC03E1FB1BDD53AB00E0E4F6 /* NEImagePickerController.swift in Sources */,
 				DC169F151BDBD6BC00742B9A /* Playgrounds.swift in Sources */,
 				DC03E1F51BDD2AE000E0E4F6 /* CustomDetailSegue.swift in Sources */,
 				DC169EF31BDBD4BB00742B9A /* PolygonsFromJSONOperation.swift in Sources */,
