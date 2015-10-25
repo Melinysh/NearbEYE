@@ -18,7 +18,7 @@ extension Bool {
 	}
 }
 
-class DetailAttractionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DetailAttractionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate {
 	
 	var attraction : AnyObject!
 	
@@ -33,6 +33,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 	@IBOutlet weak var titleLabel: UILabel!
 	
 	@IBOutlet weak var tableView: UITableView!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -59,12 +60,13 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		tableView.dataSource = self
 		tableView.delegate = self
 	
-		
+		mapView.delegate = self
 		titleLabel.text = (attraction.performSelector("selfName").retain().takeRetainedValue() as! String)
 		
 		tableView.estimatedRowHeight = 44.0
 		tableView.rowHeight = UITableViewAutomaticDimension
 		tableView.reloadData()
+		
 		
 		let swipe = UISwipeGestureRecognizer(target: self, action: "moveBack:")
 		swipe.direction = UISwipeGestureRecognizerDirection.Right
@@ -73,24 +75,33 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		// Do any additional setup after loading the view.
     }
 	
-	override func viewDidAppear(animated: Bool) {
-		
-
-		
+	func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+		if overlay is MKPolyline {
+			let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+			polylineRenderer.strokeColor = UIColor.blueColor()
+			polylineRenderer.lineWidth = 2
+			return polylineRenderer
+		}
+		return MKOverlayRenderer(overlay: overlay)
+	}
+	
+	
+	override func viewWillAppear(animated: Bool) {
 		let location = mapView.userLocation
 		let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
+		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03))
 		
-		mapView.setRegion(region, animated: true)
+		mapView.setRegion(region, animated: false)
 		mapView.showsUserLocation = true
 		mapView.showsCompass = true
-		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: true)
+		mapView.setUserTrackingMode(MKUserTrackingMode.FollowWithHeading, animated: false)
 	}
+
 	
 	func moveBack(gest : UIGestureRecognizer) {
 		if gest.state == .Ended {
 			NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-				self.performSegueWithIdentifier("unwindToMain", sender: self)
+				self.navigationController?.popViewControllerAnimated(true)
 			})
 		}
 //		self.unwindForSegue(CustomDetailUnwindSegue(identifier: "toMain", source: self, destination: prevVC, performHandler: { () -> Void in

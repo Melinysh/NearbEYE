@@ -28,7 +28,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     var cameraOverlay : CameraOverlayView!
 	
 	var coreDataComm : CoreDataCommunicator!
-	let cameraView = UIImagePickerController()
+	let cameraView = NEImagePickerController()
 
 	var attractionsNearby = [AnyObject]()
 	var selectionAttraction : AnyObject!
@@ -78,7 +78,12 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func presentDetailViewControllerForAttractionNumber(attractionNumber: Int) {
 		selectionAttraction = attractionsNearby[attractionNumber]
-		self.performSegueWithIdentifier("toDetail", sender: self)
+		//self.performSegueWithIdentifier("toDetail", sender: self)
+		let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+		vc.attraction = selectionAttraction
+		vc.userLocation = lastLocation.coordinate
+		vc.prevVC = self
+		cameraView.pushToVC(vc)
     }
     
     //MARK: - Location Manager Methods
@@ -272,10 +277,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		// set properties for detail vc here
-		let vc = segue.destinationViewController as! DetailAttractionViewController
-		vc.attraction = selectionAttraction
-		vc.userLocation = self.lastLocation.coordinate
-		vc.prevVC = self
 	}
 
 	

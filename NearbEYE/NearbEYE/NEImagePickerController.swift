@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class NEImagePickerController: UIImagePickerController {
 
     override func viewDidLoad() {
@@ -37,6 +38,10 @@ class NEImagePickerController: UIImagePickerController {
 		})
 	}
 	
+	
+	func pushToVC(vc : DetailAttractionViewController) {
+		self.pushViewController(vc, animated: true)
+	}
 
 	
     
