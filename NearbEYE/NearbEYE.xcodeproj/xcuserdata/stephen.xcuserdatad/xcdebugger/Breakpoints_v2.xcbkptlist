@@ -218,12 +218,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "directionForHeading(_:)"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "longitudeOffset(_:dir:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -239,7 +239,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
             endingLineNumber = "215"
-            landmarkName = "refreshAttractions()"
+            landmarkName = "wordify(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -287,7 +287,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
             endingLineNumber = "224"
-            landmarkName = "refreshAttractions()"
+            landmarkName = "wordify(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -329,8 +329,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "CameraViewController"
-            landmarkType = "3">
+            landmarkName = "stopHeadingAndLocation()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -361,8 +361,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
-            landmarkName = "locationManager(_:didChangeAuthorizationStatus:)"
-            landmarkType = "5">
+            landmarkName = "CameraViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -393,8 +393,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
             endingLineNumber = "138"
-            landmarkName = "CameraViewController"
-            landmarkType = "3">
+            landmarkName = "tableView(_:heightForRowAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -484,12 +484,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
-            landmarkName = "longitudeOffset(_:dir:)"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "refreshAttractions()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -500,12 +500,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
-            landmarkName = "longitudeOffset(_:dir:)"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "refreshAttractions()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -617,8 +617,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "200"
             endingLineNumber = "200"
-            landmarkName = "wordify(_:)"
-            landmarkType = "5">
+            landmarkName = "CameraViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -660,13 +660,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491766.945304"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "CameraViewController"
-            landmarkType = "3">
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "directionForHeading(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -692,11 +692,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491766.945304"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291">
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "unwindFromDetail(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -706,11 +708,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491766.945304"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290">
+            startingLineNumber = "291"
+            endingLineNumber = "291"
+            landmarkName = "unwindFromDetail(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -720,12 +724,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "unwindForSegue(_:towardsViewController:)"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "latitudeOffset(_:dir:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -796,17 +800,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "CameraViewController"
-            landmarkType = "3">
+            startingLineNumber = "267"
+            endingLineNumber = "267"
+            landmarkName = "latitudeOffset(_:dir:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -880,13 +884,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "274"
-            endingLineNumber = "274"
-            landmarkName = "unwindForSegue(_:towardsViewController:)"
-            landmarkType = "5">
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "CameraViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -912,12 +916,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
-            landmarkName = "directionForHeading(_:)"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "longitudeOffset(_:dir:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -928,12 +932,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NearbEYE/CameraViewController.swift"
-            timestampString = "467491722.597173"
+            timestampString = "467496074.810992"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259"
-            landmarkName = "directionForHeading(_:)"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "longitudeOffset(_:dir:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1030,6 +1034,38 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearbEYE/CameraViewController.swift"
+            timestampString = "467496074.810992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "refreshAttractions()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NearbEYE/CoreDataCommunicator.swift"
+            timestampString = "467494588.013678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "attractionsInRadius(_:minLat:maxLong:minLong:userLocation:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

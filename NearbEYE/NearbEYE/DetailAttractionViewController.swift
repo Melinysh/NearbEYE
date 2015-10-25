@@ -130,7 +130,7 @@ class DetailAttractionViewController: UIViewController, UITableViewDelegate, UIT
 		if let cell = tableView.dequeueReusableCellWithIdentifier("cell") as? DetailTableViewCell {
 			let propertyName = propertiesList[indexPath.row]
 			cell.propertyTitle.text =  wordify(propertyName)
-			cell.propertyValue.text  = String(attraction.valueForKey(propertyName)!)
+			cell.propertyValue.text  = attraction.valueForKey(propertyName) != nil ? String(attraction.valueForKey(propertyName)!) : "Unknown"
 			
 			return cell
 		}
