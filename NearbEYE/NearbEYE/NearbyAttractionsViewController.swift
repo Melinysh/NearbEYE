@@ -36,7 +36,10 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
         lastLocation = mapView.userLocation.coordinate
         mapView.setRegion(MKCoordinateRegion(center: lastLocation, span: mapSpan), animated: false)
         nearbyAttractions = [AnyObject]()
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        mapView.setRegion(MKCoordinateRegion(center: lastLocation, span: MKCoordinateSpanMake(0.006, 0.006)), animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +58,7 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
     func updateNearbyAttractions() {
         nearbyAttractions = coreDataComm.all(lastLocation)
         print("Attras \(nearbyAttractions.count)")
-        nearbyAttractions = Array(nearbyAttractions.prefix(10))
+        nearbyAttractions = Array(nearbyAttractions.prefix(20))
         for attraction in nearbyAttractions {
             let long = attraction.valueForKey("longitude") as! NSNumber
             let lat = attraction.valueForKey("latitude") as! NSNumber
@@ -65,6 +68,9 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if (lastLocation == nil) {
+            lastLocation = userLocation.coordinate
+        }
         if (CoreDataCommunicator.dist(lastLocation.latitude, longitude: lastLocation.longitude, userLocaltion: userLocation.coordinate) >= minimumDistanceForRefresh) {
             lastLocation = userLocation.coordinate
             updateNearbyAttractions()

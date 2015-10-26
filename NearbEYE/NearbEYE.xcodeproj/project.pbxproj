@@ -10,6 +10,7 @@
 		2C9CA46B1BDD65A000996FB8 /* TableViewCellParks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CA4691BDD65A000996FB8 /* TableViewCellParks.swift */; };
 		2C9CA46C1BDD65A000996FB8 /* TableViewCellParks.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CA46A1BDD65A000996FB8 /* TableViewCellParks.xib */; };
 		2C9CA46E1BDD69FD00996FB8 /* NearbyAttractionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CA46D1BDD69FD00996FB8 /* NearbyAttractionsViewController.swift */; };
+		2C9CA4761BDD97C300996FB8 /* iconLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C9CA4751BDD97C300996FB8 /* iconLaunch.png */; };
 		930CCFD81BDC244200B2A422 /* TableViewCellPOI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */; };
 		930CCFD91BDC244200B2A422 /* TableViewCellPOI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */; };
 		930CCFDC1BDC272400B2A422 /* TableViewCellUrbanDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */; };
@@ -86,6 +87,7 @@
 		2C9CA4691BDD65A000996FB8 /* TableViewCellParks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellParks.swift; sourceTree = "<group>"; };
 		2C9CA46A1BDD65A000996FB8 /* TableViewCellParks.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellParks.xib; sourceTree = "<group>"; };
 		2C9CA46D1BDD69FD00996FB8 /* NearbyAttractionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyAttractionsViewController.swift; sourceTree = "<group>"; };
+		2C9CA4751BDD97C300996FB8 /* iconLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconLaunch.png; sourceTree = "<group>"; };
 		930CCFD61BDC244200B2A422 /* TableViewCellPOI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellPOI.swift; sourceTree = "<group>"; };
 		930CCFD71BDC244200B2A422 /* TableViewCellPOI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPOI.xib; sourceTree = "<group>"; };
 		930CCFDA1BDC272400B2A422 /* TableViewCellUrbanDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUrbanDesign.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				DC169F2A1BDC03B500742B9A /* CameraOverlayView.swift */,
 				DC169F2B1BDC03B500742B9A /* CameraViewController.swift */,
 				2C9CA46D1BDD69FD00996FB8 /* NearbyAttractionsViewController.swift */,
+				2C9CA4751BDD97C300996FB8 /* iconLaunch.png */,
 				DC169EEB1BDBCD1D00742B9A /* JSON */,
 				DC169ED01BDBCA5300742B9A /* Assets.xcassets */,
 				DC169ED21BDBCA5300742B9A /* LaunchScreen.storyboard */,
@@ -321,7 +324,7 @@
 				TargetAttributes = {
 					DC169EC21BDBCA5300742B9A = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = CQC8JX8Q4Q;
+						DevelopmentTeam = 87ZFCTHS33;
 					};
 				};
 			};
@@ -361,6 +364,7 @@
 				93387DEB1BDC084B009B7963 /* TableViewCellRink.xib in Resources */,
 				93387DE31BDC03C1009B7963 /* TableViewCellSportField.xib in Resources */,
 				93387DEF1BDC11ED009B7963 /* TableViewCellWorship.xib in Resources */,
+				2C9CA4761BDD97C300996FB8 /* iconLaunch.png in Resources */,
 				DC169EE61BDBCD1800742B9A /* Playgrounds.json in Resources */,
 				93387DE71BDC064C009B7963 /* TableViewCellPlayground.xib in Resources */,
 				2C9CA46C1BDD65A000996FB8 /* TableViewCellParks.xib in Resources */,
