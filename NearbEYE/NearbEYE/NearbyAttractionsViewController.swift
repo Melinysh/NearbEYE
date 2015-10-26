@@ -85,10 +85,12 @@ class NearbyAttractionsViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
-        vc.attraction = (view.annotation as! NEAnnotation).attraction
-        vc.userLocation = mapView.userLocation.coordinate
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let att = (view.annotation as? NEAnnotation)?.attraction {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detailVC") as! DetailAttractionViewController
+            vc.attraction = att
+            vc.userLocation = mapView.userLocation.coordinate
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     /*
