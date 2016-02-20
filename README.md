@@ -6,3 +6,5 @@ NearbEYE was created by:
 - Aaron Cotter
 - Ethan Hardy 
 - [Stephen Melinyshyn](http://melinysh.me)
+
+![Group Photo](./Group-Photo.png)
