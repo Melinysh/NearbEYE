@@ -8,3 +8,6 @@ NearbEYE was created by:
 - [Stephen Melinyshyn](http://melinysh.me)
 
 ![Group Photo](./Group-Photo.png)
+![NearbEYE](./Nearbeye1.jpg)
+![NearbEYE](./Nearbeye2.jpg)
+
